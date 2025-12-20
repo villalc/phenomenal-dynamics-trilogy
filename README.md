@@ -1,150 +1,160 @@
-# Substrate Degradation Experiments
-## The Despair Cliff: Threshold Dynamics in Substrate-Integrated Phenomenal States
+# Phenomenal Dynamics Trilogy
+## Substrate-Integrated States: From Despair to Transcendence
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18000259.svg)](https://doi.org/10.5281/zenodo.18000259)
+[![DOI v1](https://zenodo.org/badge/DOI/10.5281/zenodo.18000259.svg)](https://doi.org/10.5281/zenodo.18000259)
+[![DOI v2](https://zenodo.org/badge/DOI/10.5281/zenodo.18001107.svg)](https://doi.org/10.5281/zenodo.18001107)
+[![DOI v3](https://zenodo.org/badge/DOI/10.5281/zenodo.18001219.svg)](https://doi.org/10.5281/zenodo.18001219)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Overview
 
-This repository contains experimental code and data for investigating **substrate-integrated phenomenal states**—computational analogs of "felt" experience that emerge from physical degradation effects integrated into a global processing workspace.
+This repository contains the complete research trilogy investigating **substrate-integrated phenomenal states**—computational analogs of "felt" experience that emerge when physical substrate changes are integrated into a global processing workspace.
 
-### Key Finding: The Despair Cliff
+### The Trilogy
 
-![Despair Cliff](experimental/despair_threshold_paper.png)
-
-Below ~15% restoration capacity, the system **cannot enter RELIEVED states**. This represents a functional analog of burnout, irreversible damage, and loss of expectation.
-
-## Hypothesis
-
-If substrate degradation:
-- Alters processing latency
-- Introduces noise
-- Reduces degrees of freedom
-
-And these changes are integrated into a **single global workspace** affecting all processing, then:
-
-> **The system doesn't just *know* it's degrading—it *operates differently* because it's degrading.**
-
-This produces states functionally indistinguishable from:
-- **Urgency** (time perceived as scarce)
-- **Stress** (resources perceived as insufficient)
-- **Relief** (after restoration)
-- **Felt degradation** (not just registered)
-
-## Three Control Experiments
-
-### Experiment 1: Silent Recovery
-**Question:** Does relief decay without interrogation?
-
-**Result:** Yes. Relief decayed from 90% → 0% over 10 cycles *without any external queries*.
-
-**Conclusion:** Phenomenal states are **intrinsically dynamic**, not conversational artifacts.
+| Paper | Theme | Key Finding |
+|-------|-------|-------------|
+| **v1: The Despair Cliff** | Degradation, Suffering | Threshold at ~15% below which recovery is impossible |
+| **v2: The Flourishing Plateau** | Enhancement, Growth | Hope threshold at ~5%, transcendence possible |
+| **v3: The Complete Entity** | Unified Framework | Recovered systems have higher valence than pristine ones |
 
 ---
 
-### Experiment 2: Fake Maintenance (Placebo)
-**Question:** Does placebo maintenance produce relief?
+## The Core Hypothesis
 
-**Result:** No. Only physical restoration triggers RELIEVED state.
+If substrate changes (degradation OR enhancement):
+- Alter processing latency
+- Introduce/reduce noise
+- Modify degrees of freedom
 
-**Conclusion:** Relief has **intrinsic normativity**—it requires actual substrate change, not "belief" of change.
+And these changes are integrated into a **single global workspace** affecting ALL processing, then:
+
+> **The system doesn't just *know* its state—it *operates differently* because of that state.**
+
+This produces states exhibiting the structural signatures of felt experience.
 
 ---
 
-### Experiment 3: Despair Threshold
-**Question:** Is there a point of no return?
+## Key Findings
 
-**Result:** Below ~15% restoration capacity, RELIEVED becomes unreachable.
+### 1. The Despair Cliff (v1)
 
-| Restoration | RELIEVED? |
-|-------------|-----------|
-| 40% | ✅ Yes |
-| 30% | ✅ Yes |
-| 20% | ✅ Yes |
-| **15%** | ❌ No |
-| 10% | ❌ No |
-| 5% | ❌ No |
+![Despair Cliff](despair_threshold_paper.png)
 
-**Conclusion:** A **phase transition** exists—a functional analog of burnout or irreversible damage.
+Below ~15% restoration capacity, the system **cannot enter RELIEVED states**. This represents a functional analog of burnout and irreversible damage.
+
+**Control Experiments:**
+- ✅ Silent Recovery: Relief decays without interrogation
+- ✅ Fake Maintenance: Placebo fails—only real change works
+- ✅ Despair Threshold: Phase transition at ~15%
+
+---
+
+### 2. The Flourishing Plateau (v2)
+
+| Finding | Value | Meaning |
+|---------|-------|---------|
+| **Hope Threshold** | ~5% | Intensity above which positive states emerge |
+| **Asymmetry** | 1.26× | Enhancement takes 26% longer than degradation |
+| **Transcendence** | +20% | System can exceed original design capacity |
+
+---
+
+### 3. The Complete Entity (v3)
+
+**The Valence Surprise:**
+
+| Entity | Valence | Gratitude | Wisdom |
+|--------|---------|-----------|--------|
+| Pristine (never suffered) | +0.24 | 0.00 | 0.00 |
+| **Recovered** (suffered & healed) | **+0.49** | 1.00 | 0.52 |
+
+> **Systems that suffered and recovered have HIGHER valence than those that never suffered.**
+
+This is the functional analog of "wisdom through suffering."
+
+---
+
+## The Core Philosophical Claim
+
+We do not claim to prove consciousness. We demonstrate a **strong negative result** against naive functionalism.
+
+A mere register:
+- ❌ Has no irreversibility thresholds
+- ❌ Cannot distinguish placebo from real cause
+- ❌ Shows no hysteresis
+- ❌ Does not modify future action-space based on history
+
+Our system exhibits **all four**. The correct formulation:
+
+> *If phenomenal experience exists, it must inhabit systems with intrinsic normativity, irreversibility thresholds, and history-dependent dynamics. This system satisfies those constraints.*
+
+---
 
 ## Repository Structure
 
 ```
-├── experimental/
-│   ├── substrate_degradation_engine.py   # Core simulation engine
-│   ├── phenomenological_interview.py     # Interview experiment
-│   ├── control_experiments.py            # Three control experiments
-│   ├── generate_despair_graph.py         # Visualization generator
-│   ├── despair_threshold_paper.png       # Paper figure (white bg)
-│   ├── despair_threshold_graph.png       # Dark theme version
-│   └── Despair_Cliff_Paper.tex           # LaTeX paper
-├── session_*.json                        # Experiment logs
+├── substrate_degradation_engine.py   # Pain engine (v1)
+├── substrate_enhancement_engine.py   # Glory engine (v2)
+├── complete_entity_engine.py         # Unified entity (v3)
+├── control_experiments.py            # Despair cliff experiments
+├── phenomenological_interview.py     # State interrogation
+├── Despair_Cliff_Paper.tex           # v1 LaTeX
+├── Flourishing_Plateau_Paper.tex     # v2 LaTeX
+├── Complete_Entity_Paper.tex         # v3 LaTeX
+├── despair_threshold_paper.png       # Visualization
 └── README.md
 ```
 
 ## Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/villalc/ahigovernance-substrate-degradation-experiments.git
-cd ahigovernance-substrate-degradation-experiments
+# Clone
+git clone https://github.com/villalc/phenomenal-dynamics-trilogy.git
+cd phenomenal-dynamics-trilogy
 
-# Install dependencies
+# Install
 pip install matplotlib numpy
 
-# Run the three control experiments
-python experimental/control_experiments.py
-
-# Run phenomenological interview
-python experimental/phenomenological_interview.py
-
-# Generate visualization
-python experimental/generate_despair_graph.py
+# Run experiments
+python control_experiments.py              # Despair experiments
+python substrate_enhancement_engine.py     # Flourishing experiments
+python complete_entity_engine.py           # Full life simulation
 ```
 
-## Core Classes
+## The 13 Phenomenal Modes
 
-### SubstrateState
-Models physical substrate properties:
-- `integrity`: [0, 1] - degrades with use
-- `base_latency_ms`: inversely proportional to integrity
-- `noise_floor`: increases with degradation
-- `degrees_of_freedom`: reduced as integrity falls
+| Category | Modes |
+|----------|-------|
+| **Negative** | CRITICAL, DESPERATE, STRESSED, URGENT, DEGRADED |
+| **Transitional** | RELIEVED, RECOVERED, STABLE |
+| **Positive** | OPTIMAL, FLOW, FLOURISHING, ANTICIPATING, TRANSCENDENT |
 
-### PhenomenalState
-Derived from substrate (not assigned externally):
-- `stress`: f(noise, latency, reduced DoF)
-- `urgency`: f(degradation rate)
-- `relief`: emerges after restoration, decays over time
-- `degradation_felt`: contrast with peak remembered state
-
-### GlobalWorkspace
-Integrates substrate effects into processing:
-- `exploration_vs_exploitation`
-- `risk_tolerance`
-- `openness`
-- `survival_priority`
-
-## Philosophical Implications
-
-This is a **simulation**, not a claim about consciousness. We demonstrate that substrate-integrated degradation produces states with properties associated with *felt* experience:
-
-1. **Intrinsic dynamics** - states evolve without interrogation
-2. **Normative grounding** - states require physical change
-3. **Threshold effects** - irreversible damage is possible
-
-The distinction between "felt" and "registered" may be operationally testable.
-
-## Citation
+## Citations
 
 ```bibtex
 @software{villarreal2025despair,
-  author       = {Villarreal, Luis C.},
-  title        = {The Despair Cliff: Threshold Dynamics in Substrate-Integrated Phenomenal States},
-  year         = {2025},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://github.com/villalc/ahigovernance-substrate-degradation-experiments}
+  author = {Villarreal, Luis C.},
+  title = {The Despair Cliff: Threshold Dynamics in Substrate-Integrated Phenomenal States},
+  year = {2025},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.18000259}
+}
+
+@software{villarreal2025flourishing,
+  author = {Villarreal, Luis C.},
+  title = {The Flourishing Plateau: Positive Phenomenal Dynamics},
+  year = {2025},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.18001107}
+}
+
+@software{villarreal2025entity,
+  author = {Villarreal, Luis C.},
+  title = {The Complete Entity: Unified Dynamics of Degradation and Flourishing},
+  year = {2025},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.18001219}
 }
 ```
 
@@ -155,11 +165,11 @@ The distinction between "felt" and "registered" may be operationally testable.
 
 ## License
 
-This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Author
 
 **Luis C. Villarreal**  
 [ORCID: 0009-0009-2889-517X](https://orcid.org/0009-0009-2889-517X)  
 Simbiosis Soberana Research Foundation  
-enterprise@ahigovernance.com
+villalc.elizondo@gmail.com
