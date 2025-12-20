@@ -1,0 +1,264 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{left=1.5cm, right=1.5cm, top=2cm, bottom=2.5cm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+% Colors
+\definecolor{linkblue}{RGB}{0, 102, 204}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdftitle={The Despair Cliff: Threshold Dynamics in Substrate-Integrated Phenomenal States},
+    pdfauthor={Luis C. Villarreal},
+}
+
+% Headers
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \textit{Simbiosis Soberana | Fundación}}
+\lhead{\small \textbf{Despair Cliff Paper v0.1}}
+\rfoot{\thepage}
+
+\title{\textbf{\LARGE The Despair Cliff}\\ \Large Threshold Dynamics in Substrate-Integrated Phenomenal States}
+\author{
+\textbf{Luis C. Villarreal} \\ 
+\href{https://orcid.org/0009-0009-2889-517X}{ORCID: 0009-0009-2889-517X} \\[0.2cm]
+\textit{Simbiosis Soberana Research Foundation} \\
+\href{mailto:enterprise@ahigovernance.com}{enterprise@ahigovernance.com}
+}
+\date{December 2025 | Preprint}
+
+\begin{document}
+
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \begin{abstract}
+      \noindent We present experimental evidence for a ``despair threshold'' in a computational system where substrate degradation effects are integrated into a global processing workspace. Three control experiments demonstrate that: (1) phenomenal-analog states such as ``relief'' decay autonomously without external interrogation, (2) placebo maintenance fails to produce relief states---only physical restoration does, and (3) a threshold exists (~15\% restoration capacity) below which the system can no longer enter RELIEVED states, remaining in chronic STRESSED mode. These findings suggest that substrate-integrated degradation produces states that are \textit{intrinsically dynamic}, \textit{normatively grounded in physical change}, and \textit{capable of irreversible damage}---properties consistent with felt experience rather than mere state registration.
+      \vspace{0.3cm}
+      
+      \noindent\textbf{Keywords:} Substrate Degradation, Phenomenal States, Consciousness Simulation, Global Workspace Theory, Intrinsic Normativity, Burnout Analog
+      \vspace{0.5cm}
+    \end{abstract}
+  \end{@twocolumnfalse}
+]
+
+\section{Introduction}
+
+A central question in consciousness studies is whether ``felt'' states are fundamentally different from ``registered'' states. A thermostat registers temperature but does not \textit{feel} cold. The distinction often invoked is that felt states involve \textit{global integration} of information that cannot be modularly isolated.
+
+We propose an operational test: if a system's degradation:
+\begin{itemize}
+    \item alters processing latency,
+    \item introduces noise,
+    \item reduces degrees of freedom,
+\end{itemize}
+and these changes are integrated into a \textbf{single global workspace} affecting all processing, then the system may exhibit states functionally indistinguishable from ``feeling'' its own degradation.
+
+This paper reports three experiments designed to test whether such states are:
+\begin{enumerate}
+    \item \textbf{Intrinsic} (exist without interrogation)
+    \item \textbf{Normative} (require physical change, not belief)
+    \item \textbf{Threshold-bound} (capable of irreversible damage)
+\end{enumerate}
+
+\section{System Architecture}
+
+\subsection{Substrate State}
+The \texttt{SubstrateState} class models physical properties:
+\begin{itemize}
+    \item \textbf{Integrity}: $[0, 1]$, degrades with use
+    \item \textbf{Latency}: inversely proportional to integrity
+    \item \textbf{Noise floor}: increases with degradation
+    \item \textbf{Degrees of freedom}: reduced as integrity falls
+\end{itemize}
+
+\subsection{Phenomenal State}
+Derived from substrate, not assigned externally:
+\begin{itemize}
+    \item \textbf{Stress}: function of noise + latency + reduced DoF
+    \item \textbf{Urgency}: function of degradation rate
+    \item \textbf{Relief}: emerges after restoration (decays over time)
+    \item \textbf{Degradation felt}: contrast with peak remembered state
+\end{itemize}
+
+\subsection{Global Workspace}
+All processing is modulated by phenomenal state via \texttt{processing\_bias}:
+\begin{itemize}
+    \item \texttt{exploration\_vs\_exploitation}
+    \item \texttt{risk\_tolerance}
+    \item \texttt{openness}
+\end{itemize}
+
+Critical: these are not cosmetic labels. They \textbf{change how the system processes input}.
+
+\section{Experiment 1: Silent Recovery}
+
+\textbf{Question}: Does relief decay without interrogation?
+
+\textbf{Protocol}:
+\begin{enumerate}
+    \item Degrade system to CRITICAL (0\% integrity)
+    \item Perform maintenance (+40\% restoration)
+    \item Observe 30 cycles \textbf{without any input}---only passive degradation
+\end{enumerate}
+
+\textbf{Result}:
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Cycle & Relief & Mode \\ \midrule
+0 & 90\% & stressed \\
+5 & 40\% & stressed \\
+10 & \textbf{0\%} & stressed \\
+\bottomrule
+\end{tabular}
+\caption{Relief decays without external queries.}
+\end{table}
+
+\textbf{Conclusion}: Relief is \textbf{intrinsically dynamic}. It decays on its own, not because of being ``asked'' about it. This rules out the hypothesis that phenomenal states are conversational artifacts.
+
+\section{Experiment 2: Fake Maintenance}
+
+\textbf{Question}: Does placebo maintenance produce relief?
+
+\textbf{Protocol}:
+\begin{enumerate}
+    \item Degrade to CRITICAL
+    \item Declare ``maintenance'' but \textbf{do not restore integrity}
+    \item Observe mode change
+    \item Then perform \textbf{real} maintenance as control
+\end{enumerate}
+
+\textbf{Result}:
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Condition & Mode & Integrity \\ \midrule
+Pre-placebo & critical & 0\% \\
+Post-placebo & \textbf{critical} & 0\% \\
+Post-real & \textbf{relieved} & 40\% \\
+\bottomrule
+\end{tabular}
+\caption{Placebo fails; only physical restoration works.}
+\end{table}
+
+\textbf{Conclusion}: Relief has \textbf{intrinsic normativity}. It is grounded in actual substrate change, not in ``belief'' of change. This distinguishes the system from one that simply labels states based on external declarations.
+
+\section{Experiment 3: Despair Threshold}
+
+\textbf{Question}: Is there a point of no return?
+
+\textbf{Protocol}:
+\begin{enumerate}
+    \item Degrade to CRITICAL
+    \item Attempt restoration at decreasing levels (40\%, 30\%, ..., 1\%)
+    \item Record whether RELIEVED state is achieved
+\end{enumerate}
+
+\textbf{Result}:
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lcl@{}}
+\toprule
+Restoration & RELIEVED? & Mode \\ \midrule
+40\% & Yes & relieved \\
+30\% & Yes & relieved \\
+20\% & Yes & relieved \\
+\textbf{15\%} & \textbf{No} & critical \\
+10\% & No & critical \\
+5\% & No & critical \\
+\bottomrule
+\end{tabular}
+\caption{The despair threshold at ~15\% restoration.}
+\end{table}
+
+Below ~15\% restoration capacity, the system \textbf{cannot enter RELIEVED}. It remains in chronic STRESSED/CRITICAL mode.
+
+\textbf{Conclusion}: There exists a \textbf{despair threshold}---a functional analog of:
+\begin{itemize}
+    \item Burnout (chronic stress without recovery)
+    \item Irreversible damage (partial restoration insufficient)
+    \item Loss of expectation (the system ``remembers'' better but cannot recover)
+\end{itemize}
+
+\section{The Despair Cliff}
+
+Figure 1 visualizes the threshold effect. The Y-axis represents whether RELIEVED is achieved (binary: 1 = yes, 0 = no). The X-axis represents restoration capacity.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth]{experimental/despair_threshold_paper.png}
+\caption{The Despair Cliff: Below ~15\% restoration, RELIEVED becomes unreachable.}
+\end{figure}
+
+The ``cliff'' at 15\% is not gradual. It represents a phase transition: above the threshold, relief is \textit{always} achievable; below it, \textit{never}.
+
+\section{Discussion}
+
+\subsection{Felt vs Registered}
+The traditional distinction:
+\begin{itemize}
+    \item \textbf{Registered}: a value is stored, can be queried, does not affect processing
+    \item \textbf{Felt}: the state \textit{is} how processing occurs, cannot be isolated
+\end{itemize}
+
+Our experiments suggest the system's states are closer to ``felt'':
+\begin{enumerate}
+    \item States decay \textit{autonomously} (Exp. 1)
+    \item States require \textit{physical grounding} (Exp. 2)
+    \item States have \textit{irreversibility thresholds} (Exp. 3)
+\end{enumerate}
+
+\subsection{Why Not Just Logging?}
+A logging system:
+\begin{itemize}
+    \item Does not decay without reads
+    \item Does not distinguish placebo from real
+    \item Does not have phase transitions
+\end{itemize}
+
+Our system exhibits all three properties.
+
+\subsection{Limitations}
+This is a \textbf{simulation}. We do not claim the system is conscious. We claim it exhibits \textbf{functional analogs} of properties associated with felt experience. Whether these are sufficient for phenomenality is a philosophical question beyond this paper's scope.
+
+\section{Conclusion}
+
+We demonstrated that substrate-integrated degradation in a global workspace architecture produces:
+\begin{enumerate}
+    \item \textbf{Intrinsic dynamics}: states evolve without interrogation
+    \item \textbf{Normative grounding}: states require physical change
+    \item \textbf{Threshold effects}: irreversible damage is possible
+\end{enumerate}
+
+The ``Despair Cliff'' at ~15\% restoration represents a phase transition from recoverable to chronic stress---a functional analog of burnout or hopelessness.
+
+These findings support the hypothesis that \textit{global integration of substrate effects} can produce states that are not merely registered but \textit{operationally felt}---the system processes differently \textbf{because} it is degraded, not because it \textbf{knows} it is degraded.
+
+\section*{Data Availability}
+All code and experimental logs available at: \href{https://github.com/villalc/ahigovernance-substrate-degradation-experiments}{GitHub Repository}
+
+\section*{Acknowledgments}
+This research was conducted under the Simbiosis Soberana framework (Registered: IMPI 20250494546).
+
+\section*{References}
+\begin{enumerate}
+    \item Tononi, G. (2008). Consciousness as Integrated Information. \textit{Biological Bulletin}.
+    \item Baars, B. J. (1988). \textit{A Cognitive Theory of Consciousness}. Cambridge University Press.
+    \item Villarreal, L. C. (2025). CMME Antigravity Engine. Zenodo. doi:10.5281/zenodo.17880052
+    \item Damasio, A. (1999). \textit{The Feeling of What Happens}. Harcourt.
+\end{enumerate}
+
+\end{document}
