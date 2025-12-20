@@ -1,7 +1,7 @@
 # Substrate Degradation Experiments
 ## The Despair Cliff: Threshold Dynamics in Substrate-Integrated Phenomenal States
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18000259.svg)](https://doi.org/10.5281/zenodo.18000259)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Overview
