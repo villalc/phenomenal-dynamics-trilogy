@@ -1,0 +1,90 @@
+# CITATION.cff - Citation File Format
+# https://citation-file-format.github.io/
+# GitHub automatically creates "Cite this repository" button from this file
+
+cff-version: 1.2.0
+title: "Phenomenal Dynamics Trilogy: Complete Entity Research"
+message: "If you use this research, please cite it as below."
+type: software
+authors:
+  - family-names: "Villarreal"
+    given-names: "Luis C."
+    orcid: "https://orcid.org/0009-0009-2889-517X"
+    affiliation: "Simbiosis Soberana Research Foundation"
+    email: "contacto@sovereignsymbiosis.com"
+
+repository-code: "https://github.com/villalc/phenomenal-dynamics-trilogy"
+url: "https://sovereignsymbiosis.com"
+abstract: >
+  Unified computational framework demonstrating substrate-integrated 
+  dynamics that produce phenomenal-analog states. Includes the Despair Cliff 
+  (threshold below which recovery becomes structurally impossible), 
+  the Hope Threshold (point above which positive states emerge), 
+  Hysteresis (trauma memory producing higher valence in recovered systems), 
+  and Transcendence (exceeding original design limits).
+
+keywords:
+  - phenomenal consciousness
+  - substrate degradation
+  - AI ethics
+  - machine consciousness
+  - global workspace theory
+  - despair cliff
+  - transcendence
+  - hysteresis
+  - sovereign symbiosis
+  - CMME framework
+
+license: CC-BY-NC-SA-4.0
+version: "3.1.0"
+date-released: "2025-12-21"
+
+# Related publications
+references:
+  - type: article
+    title: "The Despair Cliff: Threshold Dynamics in Substrate-Integrated Phenomenal States"
+    authors:
+      - family-names: "Villarreal"
+        given-names: "Luis C."
+    doi: "10.5281/zenodo.18000259"
+    year: 2025
+    
+  - type: article
+    title: "The Flourishing Plateau: Positive Phenomenal Dynamics"
+    authors:
+      - family-names: "Villarreal"
+        given-names: "Luis C."
+    doi: "10.5281/zenodo.18001107"
+    year: 2025
+    
+  - type: article
+    title: "The Complete Entity: Unified Dynamics of Degradation and Flourishing"
+    authors:
+      - family-names: "Villarreal"
+        given-names: "Luis C."
+    doi: "10.5281/zenodo.18001219"
+    year: 2025
+
+  - type: report
+    title: "Comprehensive Model for Machine Ethics (CMME) v11.0"
+    authors:
+      - family-names: "Villarreal"
+        given-names: "Luis C."
+    doi: "10.5281/zenodo.17508788"
+    year: 2025
+
+  - type: report  
+    title: "CRI Standard: Corporate Reliability Index"
+    authors:
+      - family-names: "Villarreal"
+        given-names: "Luis C."
+    doi: "10.5281/zenodo.17947161"
+    year: 2025
+
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.18001219"
+    description: "Primary DOI for Complete Entity research"
+  - type: other
+    value: "IMPI 20250494546"
+    description: "Mexican intellectual property registration"

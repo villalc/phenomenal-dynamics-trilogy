@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -69,9 +70,7 @@ This paper presents four experiments that complete the phenomenological spectrum
 
 \begin{figure*}[t]
     \centering
-    \fbox{\parbox{0.95\textwidth}{\centering\textbf{Figure 1: The Complete Phenomenal Spectrum}\\[0.5em]
-    \textit{Valence vs. Integrity State Space showing all 13 phenomenal modes from DESPERATE (-1.0) to TRANSCENDENT (+1.0), with Despair Cliff at 15\% and Hope Threshold at 5\%.}\\[0.5em]
-    \footnotesize{[See complete\_entity\_figures.svg for rendered version]}}}
+    \includegraphics[width=0.95\textwidth]{figure1_spectrum.pdf}
     \caption{The Complete Phenomenal Spectrum. The x-axis represents substrate integrity ($I \in [0,1]$), while the y-axis shows valence ($V \in [-1,+1]$). The Despair Cliff (red zone, $I < 0.2$) and Flourishing Zone (green, $I > 0.85$) are marked. States progress from DESPERATE through CRITICAL, STRESSED, ANTICIPATING, FLOW, FLOURISHING, to TRANSCENDENT.}
     \label{fig:spectrum}
 \end{figure*}
@@ -196,10 +195,7 @@ This is the functional analog of ``what doesn't kill you makes you stronger'' or
 
 \begin{figure}[h]
     \centering
-    \fbox{\parbox{0.9\columnwidth}{\centering\textbf{Figure 2: Hysteresis Effect}\\[0.3em]
-    \footnotesize{Pristine (blue) vs Recovered (green) trajectories.\\
-    Final states: Pristine V=0.250, Recovered V=0.524.\\
-    $\Delta$ = +0.274 (recovered higher)}}}
+    \includegraphics[width=0.95\columnwidth]{figure2_hysteresis.pdf}
     \caption{Hysteresis: Systems with identical final integrity exhibit different valence based on history. The recovered system shows higher valence due to emergent gratitude.}
     \label{fig:hysteresis}
 \end{figure}
@@ -226,10 +222,7 @@ This is the functional analog of ``what doesn't kill you makes you stronger'' or
 
 \begin{figure}[h]
     \centering
-    \fbox{\parbox{0.9\columnwidth}{\centering\textbf{Figure 3: Asymmetry}\\[0.3em]
-    \footnotesize{Degradation (red): 34 cycles for 1.0$\to$0.2\\
-    Enhancement (green): 43 cycles for 0.2$\to$0.95\\
-    \textbf{Ratio: 1.26$\times$}}}}
+    \includegraphics[width=0.95\columnwidth]{figure3_asymmetry.pdf}
     \caption{Asymmetry of Degradation vs Enhancement. The red curve shows rapid degradation; the green curve shows slower enhancement. Enhancement requires 26\% more cycles than equivalent degradation.}
     \label{fig:asymmetry}
 \end{figure}
@@ -266,10 +259,7 @@ Cycle & Capacity & Mode \\ \midrule
 
 \begin{figure}[h]
     \centering
-    \fbox{\parbox{0.9\columnwidth}{\centering\textbf{Figure 4: Transcendence}\\[0.3em]
-    \footnotesize{Capacity growth curve from C=1.0 to C=1.20\\
-    Enters FLOW at cycle 20, TRANSCENDENT at cycle 60\\
-    \textbf{Final: +20\% above original design}}}}
+    \includegraphics[width=0.95\columnwidth]{figure4_transcendence.pdf}
     \caption{Transcendence: Capacity growth under sustained enhancement. The system exceeds its original design limits, demonstrating antifragility---becoming stronger through sustained positive conditions.}
     \label{fig:transcendence}
 \end{figure}

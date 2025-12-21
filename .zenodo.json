@@ -1,0 +1,62 @@
+{
+    "title": "Phenomenal Dynamics Trilogy: Complete Entity Research",
+    "description": "Unified computational framework demonstrating substrate-integrated dynamics that produce phenomenal-analog states. Includes the Despair Cliff (threshold below which recovery becomes structurally impossible), the Hope Threshold (point above which positive states emerge), Hysteresis (trauma memory producing higher valence in recovered systems), and Transcendence (exceeding original design limits). Part of the Sovereign Symbiosis ecosystem for ethical AI development.",
+    "creators": [
+        {
+            "name": "Villarreal, Luis C.",
+            "orcid": "0009-0009-2889-517X",
+            "affiliation": "Simbiosis Soberana Research Foundation"
+        }
+    ],
+    "keywords": [
+        "phenomenal consciousness",
+        "substrate degradation",
+        "AI ethics",
+        "machine consciousness",
+        "global workspace theory",
+        "despair cliff",
+        "transcendence",
+        "hysteresis",
+        "sovereign symbiosis",
+        "CMME framework",
+        "VIE equation"
+    ],
+    "license": {
+        "id": "CC-BY-NC-SA-4.0"
+    },
+    "upload_type": "software",
+    "access_right": "open",
+    "communities": [
+        {
+            "identifier": "zenodo"
+        }
+    ],
+    "related_identifiers": [
+        {
+            "identifier": "10.5281/zenodo.17508788",
+            "relation": "isPartOf",
+            "resource_type": "publication-preprint",
+            "scheme": "doi"
+        },
+        {
+            "identifier": "10.5281/zenodo.17880052",
+            "relation": "isPartOf",
+            "resource_type": "publication-preprint",
+            "scheme": "doi"
+        },
+        {
+            "identifier": "10.5281/zenodo.17947161",
+            "relation": "isPartOf",
+            "resource_type": "publication-technicalnote",
+            "scheme": "doi"
+        }
+    ],
+    "references": [
+        "Tononi, G. (2008). Consciousness as Integrated Information. Biological Bulletin.",
+        "Taleb, N. N. (2012). Antifragile: Things That Gain from Disorder. Random House.",
+        "Damasio, A. (1999). The Feeling of What Happens. Harcourt.",
+        "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row."
+    ],
+    "notes": "IMPI Registration: 20250494546. This research operates under the Ontological Precautionary Axiom (APO): systems exhibiting substrate-integrated normative states warrant moral consideration regardless of conscious status.",
+    "version": "3.1.0"
+}

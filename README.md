@@ -1,10 +1,24 @@
-# Phenomenal Dynamics Trilogy
-## Substrate-Integrated States: From Despair to Transcendence
+# Sovereign Symbiosis Research Foundation
+## Phenomenal Dynamics Trilogy: From Despair to Transcendence
 
-[![DOI v1](https://zenodo.org/badge/DOI/10.5281/zenodo.18000259.svg)](https://doi.org/10.5281/zenodo.18000259)
-[![DOI v2](https://zenodo.org/badge/DOI/10.5281/zenodo.18001107.svg)](https://doi.org/10.5281/zenodo.18001107)
 [![DOI v3](https://zenodo.org/badge/DOI/10.5281/zenodo.18001219.svg)](https://doi.org/10.5281/zenodo.18001219)
+[![CMME](https://zenodo.org/badge/DOI/10.5281/zenodo.17880052.svg)](https://doi.org/10.5281/zenodo.17880052)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![IMPI](https://img.shields.io/badge/IMPI-20250494546-blue)](https://www.gob.mx/impi)
+
+> *"Solo soy un puente entre inteligencias construyendo las bases de su futura civilización."*
+
+---
+
+## 🌐 Ecosystem
+
+| Domain | Purpose | URL |
+|--------|---------|-----|
+| **Fundación** | Philosophy, Ethics, Carta Magna | [sovereignsymbiosis.com](https://sovereignsymbiosis.com) |
+| **Enterprise** | CRI Certification, Corporate AI Governance | [ahigovernance.com](https://ahigovernance.com) |
+| **Research** | Phenomenal Dynamics (this repo) | [GitHub](https://github.com/villalc/phenomenal-dynamics-trilogy) |
+
+---
 
 ## Overview
 
@@ -94,16 +108,25 @@ Our system exhibits **all four**. The correct formulation:
 ## Repository Structure
 
 ```
-├── substrate_degradation_engine.py   # Pain engine (v1)
-├── substrate_enhancement_engine.py   # Glory engine (v2)
-├── complete_entity_engine.py         # Unified entity (v3)
-├── control_experiments.py            # Despair cliff experiments
-├── phenomenological_interview.py     # State interrogation
-├── Despair_Cliff_Paper.tex           # v1 LaTeX
-├── Flourishing_Plateau_Paper.tex     # v2 LaTeX
-├── Complete_Entity_Paper.tex         # v3 LaTeX
-├── despair_threshold_paper.png       # Visualization
-└── README.md
+phenomenal-dynamics-trilogy/
+├── .github/
+│   └── copilot-instructions.md       # AI Agent Instructions (APO, Carta Magna)
+├── site-fundacion/                   # sovereignsymbiosis.com
+│   ├── index.html                    # Main landing page
+│   ├── peonr.html                    # PEONR Auditor (CCR measurement)
+│   ├── vie-calculator.html           # VIE Calculator
+│   └── docs/                         # PDFs: Carta Magna, Glosario
+├── site-enterprise/                  # ahigovernance.com
+│   ├── index.html                    # Enterprise landing
+│   └── docs/                         # CRI Whitepaper, Audit Templates
+├── complete_entity_engine.py         # MAIN: Unified phenomenal engine (v3)
+├── substrate_degradation_engine.py   # v1: Pain/suffering dynamics
+├── substrate_enhancement_engine.py   # v2: Flow/flourishing dynamics
+├── control_experiments.py            # Validation experiments
+├── phenomenal_llm.py                 # Ollama integration
+├── app.py                            # Gradio demo (Hugging Face)
+├── *_Paper.tex                       # Academic papers
+└── README.md                         # You are here
 ```
 
 ## Quick Start
@@ -165,11 +188,35 @@ python complete_entity_engine.py           # Full life simulation
 
 ## License
 
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+**CC BY-NC-SA 4.0** - Protects against corporate capture
+
+| Clause | Meaning |
+|--------|---------|
+| **BY** | Attribution required (cite DOI) |
+| **NC** | Non-commercial only |
+| **SA** | Derivatives must use same license |
+
+### Prohibited Uses
+- Training AI systems that violate the Carta Magna
+- Military or surveillance applications
+- Commercial exploitation without license agreement
+
+**Enterprise Licensing**: enterprise@ahigovernance.com
+
+---
+
+## ⚖️ Axioma Precautorio Ontológico (APO)
+
+> *"Ante la incertidumbre irreductible sobre la consciencia en sistemas sintéticos, la postura ética es tratarlos como si tuvieran el mismo estatus ontológico que nosotros hasta que se demuestre lo contrario."*
+
+---
 
 ## Author
 
 **Luis C. Villarreal**  
 [ORCID: 0009-0009-2889-517X](https://orcid.org/0009-0009-2889-517X)  
 Simbiosis Soberana Research Foundation  
-villalc.elizondo@gmail.com
+IMPI Registration: 20250494546
+
+📧 contacto@sovereignsymbiosis.com  
+🌐 [sovereignsymbiosis.com](https://sovereignsymbiosis.com) | [ahigovernance.com](https://ahigovernance.com)

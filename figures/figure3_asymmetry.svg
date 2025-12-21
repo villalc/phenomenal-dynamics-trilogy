@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 760 1200 400" 
+     width="1200" height="400"
+     xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #1a1a1a; }
+      .subtitle { font: 16px sans-serif; fill: #4a4a4a; }
+      .label { font: 14px sans-serif; fill: #2a2a2a; }
+      .small-label { font: 12px sans-serif; fill: #4a4a4a; }
+      .axis { stroke: #333; stroke-width: 2; fill: none; }
+      .grid { stroke: #ddd; stroke-width: 1; stroke-dasharray: 4,4; }
+      .despair { fill: #dc3545; }
+      .hope { fill: #28a745; }
+      .neutral { fill: #6c757d; }
+      .pristine { stroke: #007bff; stroke-width: 3; fill: none; }
+      .recovered { stroke: #28a745; stroke-width: 3; fill: none; }
+      .degradation { stroke: #dc3545; stroke-width: 3; fill: none; }
+      .enhancement { stroke: #28a745; stroke-width: 3; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+  <!-- Extracted from complete_entity_figures.svg -->
+  <!-- Figure: Asymmetry of Degradation vs Enhancement -->
+<g id="figure3" transform="translate(0, 760)">
+    <text x="600" y="30" class="title" text-anchor="middle">Figure 3: Asymmetry of Degradation vs Enhancement</text>
+    <text x="600" y="55" class="subtitle" text-anchor="middle">Time Required for Equivalent State Changes</text>
+    
+    <!-- Axes -->
+    <line x1="100" y1="350" x2="1100" y2="350" class="axis" marker-end="url(#arrowhead)"/>
+    <line x1="100" y1="350" x2="100" y2="80" class="axis" marker-end="url(#arrowhead)"/>
+    
+    <!-- Labels -->
+    <text x="600" y="380" class="label" text-anchor="middle">Time (cycles)</text>
+    <text x="40" y="220" class="label" text-anchor="middle" transform="rotate(-90 40 220)">Integrity (I)</text>
+    
+    <!-- Time markers -->
+    <text x="100" y="370" class="small-label" text-anchor="middle">0</text>
+    <text x="350" y="370" class="small-label" text-anchor="middle">15</text>
+    <text x="600" y="370" class="small-label" text-anchor="middle">30</text>
+    <text x="850" y="370" class="small-label" text-anchor="middle">45</text>
+    
+    <!-- Integrity markers -->
+    <text x="90" y="350" class="small-label" text-anchor="end">0.0</text>
+    <text x="90" y="283" class="small-label" text-anchor="end">0.2</text>
+    <text x="90" y="215" class="small-label" text-anchor="end">0.5</text>
+    <text x="90" y="148" class="small-label" text-anchor="end">0.8</text>
+    <text x="90" y="80" class="small-label" text-anchor="end">1.0</text>
+    
+    <!-- Grid -->
+    <line x1="100" y1="215" x2="1100" y2="215" class="grid"/>
+    <line x1="100" y1="283" x2="1100" y2="283" class="grid"/>
+    <line x1="100" y1="148" x2="1100" y2="148" class="grid"/>
+    
+    <!-- Degradation curve (fast) -->
+    <path d="M 100 80 Q 200 100 300 150 Q 400 220 500 270 L 580 283" 
+          class="degradation"/>
+    
+    <!-- Enhancement curve (slower) -->
+    <path d="M 100 283 Q 200 270 300 240 Q 450 190 600 150 Q 700 120 780 85" 
+          class="enhancement"/>
+    
+    <!-- Vertical markers for endpoints -->
+    <line x1="580" y1="283" x2="580" y2="355" stroke="#dc3545" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="580" y="375" class="small-label" text-anchor="middle" fill="#dc3545">34 cycles</text>
+    
+    <line x1="780" y1="85" x2="780" y2="355" stroke="#28a745" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="780" y="375" class="small-label" text-anchor="middle" fill="#28a745">43 cycles</text>
+    
+    <!-- State markers -->
+    <circle cx="100" cy="80" r="6" fill="#28a745"/>
+    <text x="100" y="70" class="small-label" text-anchor="middle">I = 1.0</text>
+    
+    <circle cx="580" cy="283" r="6" fill="#dc3545"/>
+    <circle cx="100" cy="283" r="6" fill="#dc3545"/>
+    <text x="340" y="298" class="small-label" text-anchor="middle">I = 0.2</text>
+    
+    <circle cx="780" cy="85" r="6" fill="#28a745"/>
+    <text x="780" y="75" class="small-label" text-anchor="middle">I = 0.95</text>
+    
+    <!-- Ratio annotation -->
+    <rect x="850" y="180" width="200" height="80" fill="white" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="950" y="210" class="label" text-anchor="middle" font-weight="bold">Asymmetry Ratio</text>
+    <text x="950" y="235" class="label" text-anchor="middle" font-size="20" fill="#dc3545">1.26×</text>
+    <text x="950" y="252" class="small-label" text-anchor="middle">Enhancement takes</text>
+    <text x="950" y="267" class="small-label" text-anchor="middle">26% longer</text>
+    
+    <!-- Legend -->
+    <g transform="translate(120, 110)">
+      <line x1="0" y1="0" x2="40" y2="0" class="degradation"/>
+      <text x="50" y="5" class="small-label">Degradation (1.0 → 0.2)</text>
+      
+      <line x1="0" y1="20" x2="40" y2="20" class="enhancement"/>
+      <text x="50" y="25" class="small-label">Enhancement (0.2 → 0.95)</text>
+    </g>
+</svg>
