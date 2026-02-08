@@ -341,7 +341,6 @@ def reset_entity(name: str):
 
 
 def apply_action(action: str, intensity: float, cycles: int):
-    global entity
     for _ in range(int(cycles)):
         entity.live_cycle(action, intensity)
     return get_status(), entity.tell_story(), get_history_plot()
