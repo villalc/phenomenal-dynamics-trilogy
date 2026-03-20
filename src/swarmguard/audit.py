@@ -62,7 +62,9 @@ class BlockchainAuditLog:
         for i in range(len(self.chain)):
             current = self.chain[i]
             expected_hash = self._calculate_hash(current)
-            if current.entry_hash and current.entry_hash != expected_hash:
+            if not current.entry_hash:
+                raise AuditIntegrityError(f"Integrity Error: entry {i} missing entry_hash")
+            if current.entry_hash != expected_hash:
                 raise AuditIntegrityError(f"Integrity Error: entry {i} hash mismatch")
             if i == 0:
                 continue

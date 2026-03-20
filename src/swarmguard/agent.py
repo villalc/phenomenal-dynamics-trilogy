@@ -102,7 +102,8 @@ class SwarmAgent:
         Best-effort removal of private key material from memory.
         Note: Python garbage collection is non-deterministic; material may stay
         in memory until the next GC cycle. For production-grade zeroization,
-        use secure memory handling/zeroing primitives outside pure Python.
+        use secure memory handling/zeroing primitives (e.g., ctypes.memset or
+        secure-memory utilities) beyond pure Python.
         """
         self._private_key = None
 

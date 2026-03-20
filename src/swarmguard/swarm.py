@@ -31,7 +31,8 @@ def _build_counter(name: str, description: str, labelnames: List[str], registry:
                 return None
         return _Dummy()
     # registry=None registers on the global registry (can collide when multiple coordinators are created);
-    # pass a CollectorRegistry in tests/services to avoid duplicate metric names.
+    # pass a CollectorRegistry (e.g., from prometheus_client import CollectorRegistry; registry = CollectorRegistry())
+    # in tests/services to avoid duplicate metric names.
     reg = registry
     return CounterType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
 

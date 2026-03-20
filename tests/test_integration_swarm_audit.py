@@ -8,7 +8,7 @@ import json
 import pytest
 from src.swarmguard.swarm import SwarmCoordinator
 from src.swarmguard.agent import SwarmAgent
-from src.swarmguard.audit import BlockchainAuditLog, AuditIntegrityError
+from src.swarmguard.audit import BlockchainAuditLog, AuditIntegrityError, AuditEntry
 
 
 def test_consensus_persists_audit_and_detects_tamper(tmp_path):
@@ -39,5 +39,11 @@ def test_consensus_persists_audit_and_detects_tamper(tmp_path):
     data = json.loads(path.read_text())
     data[1]["action"] = "tampered"
     path.write_text(json.dumps(data))
+
+    manual = BlockchainAuditLog.__new__(BlockchainAuditLog)
+    manual._persistence_path = None  # type: ignore[attr-defined]
+    manual.chain = [AuditEntry(**item) for item in data]  # type: ignore[attr-defined]
+    assert manual.verify_chain() is False
+
     with pytest.raises(AuditIntegrityError):
         BlockchainAuditLog(persistence_path=str(path))
