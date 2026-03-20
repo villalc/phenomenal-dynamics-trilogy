@@ -4,6 +4,7 @@ Registro IMPI: EXP-3495968
 License: MIT
 """
 
+import json
 import pytest
 from src.swarmguard.audit import BlockchainAuditLog, AuditEntry, AuditIntegrityError
 
@@ -89,3 +90,24 @@ def test_audit_log_persistence_roundtrip(tmp_path):
     # Deliberately tamper with action to test integrity verification
     reloaded.chain[1].action = "tampered"
     assert reloaded.verify_chain() is False
+
+
+def test_audit_load_detects_tampered_file(tmp_path):
+    path = tmp_path / "audit.json"
+    log = BlockchainAuditLog(persistence_path=path)
+
+    entry = AuditEntry(
+        timestamp="2025-01-01T12:00:00",
+        agent_id="agent1",
+        action="login",
+        proof_hash="abc",
+        prev_hash=log.get_last_hash(),
+    )
+    log.append_entry(entry)
+
+    data = json.loads(path.read_text())
+    data[1]["action"] = "tampered"
+    path.write_text(json.dumps(data))
+
+    with pytest.raises(AuditIntegrityError):
+        BlockchainAuditLog(persistence_path=path)

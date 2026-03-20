@@ -15,11 +15,11 @@ from .audit import BlockchainAuditLog, AuditEntry
 
 try:  # pragma: no cover - optional dependency
     from prometheus_client import Counter as PromCounter, Histogram as PromHistogram
-    CounterType: Optional[Any] = PromCounter
-    HistogramType: Optional[Any] = PromHistogram
+    CounterType: Optional[type] = PromCounter
+    HistogramType: Optional[type] = PromHistogram
 except ImportError:  # pragma: no cover - optional dependency
-    CounterType = None
-    HistogramType = None
+    CounterType = None  # type: ignore[assignment]
+    HistogramType = None  # type: ignore[assignment]
 
 
 def _build_counter(name: str, description: str, labelnames: List[str], registry: Optional[Any]):

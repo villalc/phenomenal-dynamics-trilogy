@@ -59,8 +59,18 @@ class BlockchainAuditLog:
             return
         raw = json.loads(self._persistence_path.read_text())
         self.chain = [AuditEntry(**item) for item in raw]
-        if not self.verify_chain():
-            raise AuditIntegrityError("Integrity Error: persisted audit log failed verification")
+        for i in range(len(self.chain)):
+            current = self.chain[i]
+            expected_hash = self._calculate_hash(current)
+            if current.entry_hash and current.entry_hash != expected_hash:
+                raise AuditIntegrityError(f"Integrity Error: entry {i} hash mismatch")
+            if i == 0:
+                continue
+            prev_hash = self._calculate_hash(self.chain[i-1])
+            if current.prev_hash != prev_hash:
+                raise AuditIntegrityError(
+                    f"Integrity Error: entry {i} prev_hash {current.prev_hash} != expected {prev_hash}"
+                )
 
     def get_last_hash(self) -> str:
         if not self.chain:

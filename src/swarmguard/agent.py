@@ -5,7 +5,7 @@ License: MIT
 """
 
 from dataclasses import dataclass
-from typing import Any, Dict, Optional, cast
+from typing import Any, Dict, Optional
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.serialization import (
@@ -131,5 +131,4 @@ class SwarmAgent:
         private_key = load_pem_private_key(encrypted_pem, password=password)
         if not isinstance(private_key, ec.EllipticCurvePrivateKey):
             raise ValueError("Expected EC private key")
-        ec_key = cast(ec.EllipticCurvePrivateKey, private_key)
-        return cls(agent_id, role, trust_score, private_key=ec_key)
+        return cls(agent_id, role, trust_score, private_key=private_key)

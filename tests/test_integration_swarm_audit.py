@@ -4,9 +4,11 @@ Registro IMPI: EXP-3495968
 License: MIT
 """
 
+import json
+import pytest
 from src.swarmguard.swarm import SwarmCoordinator
 from src.swarmguard.agent import SwarmAgent
-from src.swarmguard.audit import BlockchainAuditLog
+from src.swarmguard.audit import BlockchainAuditLog, AuditIntegrityError
 
 
 def test_consensus_persists_audit_and_detects_tamper(tmp_path):
@@ -33,3 +35,9 @@ def test_consensus_persists_audit_and_detects_tamper(tmp_path):
     # Deliberately tamper with action to test integrity verification
     reloaded.chain[1].action = "tampered"
     assert reloaded.verify_chain() is False
+
+    data = json.loads(path.read_text())
+    data[1]["action"] = "tampered"
+    path.write_text(json.dumps(data))
+    with pytest.raises(AuditIntegrityError):
+        BlockchainAuditLog(persistence_path=str(path))
