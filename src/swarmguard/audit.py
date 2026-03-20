@@ -10,6 +10,9 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import List, Dict, Optional
 
+class AuditIntegrityError(ValueError):
+    """Raised when audit log integrity verification fails."""
+
 @dataclass
 class AuditEntry:
     timestamp: str
@@ -57,7 +60,7 @@ class BlockchainAuditLog:
         raw = json.loads(self._persistence_path.read_text())
         self.chain = [AuditEntry(**item) for item in raw]
         if not self.verify_chain():
-            raise ValueError("Integrity Error: persisted audit log failed verification")
+            raise AuditIntegrityError("Integrity Error: persisted audit log failed verification")
 
     def get_last_hash(self) -> str:
         if not self.chain:
@@ -68,7 +71,7 @@ class BlockchainAuditLog:
         """Appends an entry after validating its prev_hash."""
         expected_prev = self.get_last_hash()
         if entry.prev_hash != expected_prev:
-            raise ValueError(f"Integrity Error: Entry prev_hash {entry.prev_hash} != chain tip {expected_prev}")
+            raise AuditIntegrityError(f"Integrity Error: Entry prev_hash {entry.prev_hash} != chain tip {expected_prev}")
 
         entry.entry_hash = self._calculate_hash(entry)
         self.chain.append(entry)

@@ -22,7 +22,7 @@ except ImportError:  # pragma: no cover - optional dependency
     HistogramType = None
 
 
-def _build_counter(name: str, description: str, labelnames: List[str]):
+def _build_counter(name: str, description: str, labelnames: List[str], registry: Optional[Any]):
     if CounterType is None:
         class _Dummy:
             def labels(self, *args, **kwargs):
@@ -30,10 +30,12 @@ def _build_counter(name: str, description: str, labelnames: List[str]):
             def inc(self, *args, **kwargs):
                 return None
         return _Dummy()
-    return CounterType(name, description, labelnames=labelnames, registry=None)  # type: ignore[call-arg]
+    # registry=None avoids collisions in unit tests; callers can pass a shared registry to export metrics.
+    reg = registry if registry is not None else None
+    return CounterType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
 
 
-def _build_histogram(name: str, description: str, labelnames: List[str]):
+def _build_histogram(name: str, description: str, labelnames: List[str], registry: Optional[Any]):
     if HistogramType is None:
         class _Dummy:
             def labels(self, *args, **kwargs):
@@ -41,7 +43,8 @@ def _build_histogram(name: str, description: str, labelnames: List[str]):
             def observe(self, *args, **kwargs):
                 return None
         return _Dummy()
-    return HistogramType(name, description, labelnames=labelnames, registry=None)  # type: ignore[call-arg]
+    reg = registry if registry is not None else None
+    return HistogramType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
 
 @dataclass
 class Proposal:
@@ -52,7 +55,7 @@ class Proposal:
     status: str = "pending"  # pending, approved, rejected
 
 class SwarmCoordinator:
-    def __init__(self, blockchain_path: Optional[str] = None):
+    def __init__(self, blockchain_path: Optional[str] = None, metrics_registry: Optional[Any] = None):
         self.agents: Dict[str, SwarmAgent] = {}
         self.audit_trail: List[Dict[str, Any]] = [] # Detailed internal log
         self.blockchain_log = BlockchainAuditLog(persistence_path=blockchain_path) # Immutable ledger
@@ -61,11 +64,13 @@ class SwarmCoordinator:
             "swarm_consensus_total",
             "Total consensus decisions by status",
             ["status"],
+            metrics_registry,
         )
         self._consensus_latency = _build_histogram(
             "swarm_consensus_latency_seconds",
             "Time taken to complete consensus evaluation",
             ["status"],
+            metrics_registry,
         )
 
     def register_agent(self, agent: SwarmAgent):

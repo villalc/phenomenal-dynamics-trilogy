@@ -98,7 +98,11 @@ class SwarmAgent:
         self.public_key = self._private_key.public_key()
 
     def destroy_private_key(self) -> None:
-        """Best-effort removal of private key material from memory."""
+        """
+        Best-effort removal of private key material from memory.
+        Nota: la recolección de basura en Python no es determinista; el material
+        puede permanecer en memoria hasta el próximo ciclo de GC.
+        """
         self._private_key = None
 
     def export_private_key_encrypted(self, password: bytes) -> bytes:
@@ -125,5 +129,7 @@ class SwarmAgent:
         Restore an agent using an encrypted PEM private key.
         """
         private_key = load_pem_private_key(encrypted_pem, password=password)
+        if not isinstance(private_key, ec.EllipticCurvePrivateKey):
+            raise ValueError("Expected EC private key")
         ec_key = cast(ec.EllipticCurvePrivateKey, private_key)
         return cls(agent_id, role, trust_score, private_key=ec_key)

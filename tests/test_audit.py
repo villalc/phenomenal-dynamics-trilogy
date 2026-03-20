@@ -5,7 +5,7 @@ License: MIT
 """
 
 import pytest
-from src.swarmguard.audit import BlockchainAuditLog, AuditEntry
+from src.swarmguard.audit import BlockchainAuditLog, AuditEntry, AuditIntegrityError
 
 def test_audit_log_append_and_verify():
     log = BlockchainAuditLog()
@@ -65,7 +65,7 @@ def test_audit_log_append_invalid_prev_hash():
         prev_hash="wrong_hash"
     )
 
-    with pytest.raises(ValueError):
+    with pytest.raises(AuditIntegrityError):
         log.append_entry(entry_invalid)
 
 

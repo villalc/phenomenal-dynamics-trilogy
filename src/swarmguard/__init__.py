@@ -7,7 +7,7 @@ License: MIT
 from .agent import SwarmAgent
 from .swarm import SwarmCoordinator
 from .zkp import ZeroKnowledgeVerifier
-from .audit import BlockchainAuditLog, AuditEntry
+from .audit import BlockchainAuditLog, AuditEntry, AuditIntegrityError
 
 __all__ = [
     "SwarmAgent",
@@ -15,4 +15,5 @@ __all__ = [
     "ZeroKnowledgeVerifier",
     "BlockchainAuditLog",
     "AuditEntry",
+    "AuditIntegrityError",
 ]
