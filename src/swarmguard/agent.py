@@ -5,9 +5,15 @@ License: MIT
 """
 
 from dataclasses import dataclass
-from typing import Any, Dict
-from cryptography.hazmat.primitives import hashes
+from typing import Any, Dict, Optional, cast
+from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives.serialization import (
+    BestAvailableEncryption,
+    Encoding,
+    PrivateFormat,
+    load_pem_private_key,
+)
 
 @dataclass
 class Vote:
@@ -17,17 +23,29 @@ class Vote:
     signature: bytes
 
 class SwarmAgent:
-    def __init__(self, agent_id: str, role: str, trust_score: float = 1.0):
+    def __init__(
+        self,
+        agent_id: str,
+        role: str,
+        trust_score: float = 1.0,
+        private_key: Optional[ec.EllipticCurvePrivateKey] = None,
+    ):
         self.agent_id = agent_id
         self.role = role
         self.trust_score = trust_score
-        # Generate private key (simulated HSM)
-        self._private_key = ec.generate_private_key(ec.SECP256R1())
+        # Generate private key (simulated HSM) with secure RNG if not provided
+        self._private_key: Optional[ec.EllipticCurvePrivateKey] = private_key or ec.generate_private_key(ec.SECP256R1())
         self.public_key = self._private_key.public_key()
+
+    def _require_private_key(self) -> ec.EllipticCurvePrivateKey:
+        if self._private_key is None:
+            raise ValueError("Private key is not available (destroyed or not loaded).")
+        return self._private_key
 
     def sign_action(self, action: str) -> Dict[str, Any]:
         """Signs an action string and returns the payload."""
-        signature = self._private_key.sign(
+        private_key = self._require_private_key()
+        signature = private_key.sign(
             action.encode(),
             ec.ECDSA(hashes.SHA256())
         )
@@ -60,7 +78,8 @@ class SwarmAgent:
         approval = self.trust_score >= 0.5
         # The vote itself should be signed
         vote_data = f"{self.agent_id}:{proposal.get('id')}:{approval}"
-        signature = self._private_key.sign(
+        private_key = self._require_private_key()
+        signature = private_key.sign(
             vote_data.encode(),
             ec.ECDSA(hashes.SHA256())
         )
@@ -70,3 +89,39 @@ class SwarmAgent:
             approval=approval,
             signature=signature
         )
+
+    def rotate_private_key(self) -> None:
+        """Generates a new private key using a secure RNG and updates public key."""
+        self._private_key = ec.generate_private_key(ec.SECP256R1())
+        self.public_key = self._private_key.public_key()
+
+    def destroy_private_key(self) -> None:
+        """Best-effort removal of private key material from memory."""
+        self._private_key = None
+
+    def export_private_key_encrypted(self, password: bytes) -> bytes:
+        """
+        Export the private key encrypted (at-rest encryption) for secure storage.
+        """
+        private_key = self._require_private_key()
+        return private_key.private_bytes(
+            encoding=Encoding.PEM,
+            format=PrivateFormat.PKCS8,
+            encryption_algorithm=BestAvailableEncryption(password),
+        )
+
+    @classmethod
+    def from_encrypted_private_key(
+        cls,
+        agent_id: str,
+        role: str,
+        trust_score: float,
+        encrypted_pem: bytes,
+        password: bytes,
+    ) -> "SwarmAgent":
+        """
+        Restore an agent using an encrypted PEM private key.
+        """
+        private_key = load_pem_private_key(encrypted_pem, password=password)
+        ec_key = cast(ec.EllipticCurvePrivateKey, private_key)
+        return cls(agent_id, role, trust_score, private_key=ec_key)

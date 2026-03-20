@@ -14,7 +14,8 @@ authors = [
 ]
 dependencies = [
   "numpy",
-  "cryptography"
+  "cryptography",
+  "prometheus-client"
 ]
 
 [tool.setuptools]
@@ -25,3 +26,9 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = "."
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+check_untyped_defs = false

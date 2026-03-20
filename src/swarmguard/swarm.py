@@ -4,13 +4,44 @@ Registro IMPI: EXP-3495968
 License: MIT
 """
 
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+import time
 import uuid
 import json
 from .agent import SwarmAgent, Vote
 from .audit import BlockchainAuditLog, AuditEntry
+
+try:  # pragma: no cover - optional dependency
+    from prometheus_client import Counter as PromCounter, Histogram as PromHistogram
+    CounterType: Optional[Any] = PromCounter
+    HistogramType: Optional[Any] = PromHistogram
+except Exception:  # pragma: no cover - optional dependency
+    CounterType = None
+    HistogramType = None
+
+
+def _build_counter(name: str, description: str, labelnames: List[str]):
+    if CounterType is None:
+        class _Dummy:
+            def labels(self, *args, **kwargs):
+                return self
+            def inc(self, *args, **kwargs):
+                return None
+        return _Dummy()
+    return CounterType(name, description, labelnames=labelnames, registry=None)  # type: ignore[call-arg]
+
+
+def _build_histogram(name: str, description: str, labelnames: List[str]):
+    if HistogramType is None:
+        class _Dummy:
+            def labels(self, *args, **kwargs):
+                return self
+            def observe(self, *args, **kwargs):
+                return None
+        return _Dummy()
+    return HistogramType(name, description, labelnames=labelnames, registry=None)  # type: ignore[call-arg]
 
 @dataclass
 class Proposal:
@@ -21,11 +52,21 @@ class Proposal:
     status: str = "pending"  # pending, approved, rejected
 
 class SwarmCoordinator:
-    def __init__(self):
+    def __init__(self, blockchain_path: Optional[str] = None):
         self.agents: Dict[str, SwarmAgent] = {}
         self.audit_trail: List[Dict[str, Any]] = [] # Detailed internal log
-        self.blockchain_log = BlockchainAuditLog() # Immutable ledger
+        self.blockchain_log = BlockchainAuditLog(blockchain_path) # Immutable ledger
         self.proposals: Dict[str, Proposal] = {}
+        self._consensus_counter = _build_counter(
+            "swarm_consensus_total",
+            "Total consensus decisions by status",
+            ["status"],
+        )
+        self._consensus_latency = _build_histogram(
+            "swarm_consensus_latency_seconds",
+            "Time taken to complete consensus evaluation",
+            ["status"],
+        )
 
     def register_agent(self, agent: SwarmAgent):
         self.agents[agent.agent_id] = agent
@@ -51,6 +92,7 @@ class SwarmCoordinator:
         return proposal
 
     def execute_if_consensus(self, proposal: Proposal) -> str:
+        start = time.perf_counter()
         if proposal.status != "pending":
             return f"Proposal already {proposal.status}"
 
@@ -98,4 +140,7 @@ class SwarmCoordinator:
         )
         self.blockchain_log.append_entry(entry)
 
+        duration = time.perf_counter() - start
+        self._consensus_counter.labels(status=proposal.status).inc()
+        self._consensus_latency.labels(status=proposal.status).observe(duration)
         return result

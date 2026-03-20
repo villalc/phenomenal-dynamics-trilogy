@@ -7,7 +7,8 @@ License: MIT
 import hashlib
 import json
 from dataclasses import dataclass, asdict
-from typing import List, Dict
+from pathlib import Path
+from typing import List, Dict, Optional
 
 @dataclass
 class AuditEntry:
@@ -16,12 +17,17 @@ class AuditEntry:
     action: str
     proof_hash: str
     prev_hash: str
+    entry_hash: str = ""
 
 class BlockchainAuditLog:
-    def __init__(self):
+    def __init__(self, persistence_path: Optional[str] = None):
         self.chain: List[AuditEntry] = []
-        # Genesis block
-        self._append_genesis()
+        self._persistence_path = Path(persistence_path) if persistence_path else None
+        if self._persistence_path and self._persistence_path.exists():
+            self._load_chain()
+        else:
+            self._append_genesis()
+            self._persist_chain()
 
     def _calculate_hash(self, entry: AuditEntry) -> str:
         entry_str = f"{entry.timestamp}{entry.agent_id}{entry.action}{entry.proof_hash}{entry.prev_hash}"
@@ -35,7 +41,23 @@ class BlockchainAuditLog:
             proof_hash="0"*64,
             prev_hash="0"*64
         )
+        genesis.entry_hash = self._calculate_hash(genesis)
         self.chain.append(genesis)
+
+    def _persist_chain(self):
+        if not self._persistence_path:
+            return
+        self._persistence_path.parent.mkdir(parents=True, exist_ok=True)
+        serialized = [asdict(e) for e in self.chain]
+        self._persistence_path.write_text(json.dumps(serialized, ensure_ascii=False, indent=2))
+
+    def _load_chain(self):
+        if not self._persistence_path:
+            return
+        raw = json.loads(self._persistence_path.read_text())
+        self.chain = [AuditEntry(**item) for item in raw]
+        if not self.verify_chain():
+            raise ValueError("Integrity Error: persisted audit log failed verification")
 
     def get_last_hash(self) -> str:
         if not self.chain:
@@ -48,15 +70,21 @@ class BlockchainAuditLog:
         if entry.prev_hash != expected_prev:
             raise ValueError(f"Integrity Error: Entry prev_hash {entry.prev_hash} != chain tip {expected_prev}")
 
+        entry.entry_hash = self._calculate_hash(entry)
         self.chain.append(entry)
+        self._persist_chain()
         return True
 
     def verify_chain(self) -> bool:
         """Verifies the entire chain integrity."""
-        for i in range(1, len(self.chain)):
+        for i in range(len(self.chain)):
+            current = self.chain[i]
+            if current.entry_hash and current.entry_hash != self._calculate_hash(current):
+                return False
+            if i == 0:
+                continue
             prev = self.chain[i-1]
-            curr = self.chain[i]
-            if curr.prev_hash != self._calculate_hash(prev):
+            if current.prev_hash != self._calculate_hash(prev):
                 return False
         return True
 

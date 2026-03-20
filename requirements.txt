@@ -2,3 +2,4 @@ gradio>=4.0.0
 matplotlib>=3.7.0
 cryptography
 numpy
+prometheus-client

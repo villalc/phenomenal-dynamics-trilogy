@@ -67,3 +67,24 @@ def test_audit_log_append_invalid_prev_hash():
 
     with pytest.raises(ValueError):
         log.append_entry(entry_invalid)
+
+
+def test_audit_log_persistence_roundtrip(tmp_path):
+    path = tmp_path / "audit.json"
+    log = BlockchainAuditLog(persistence_path=path)
+
+    entry = AuditEntry(
+        timestamp="2025-01-01T12:00:00",
+        agent_id="agent1",
+        action="login",
+        proof_hash="abc",
+        prev_hash=log.get_last_hash(),
+    )
+    log.append_entry(entry)
+
+    reloaded = BlockchainAuditLog(persistence_path=path)
+    assert len(reloaded.chain) == 2
+    assert reloaded.verify_chain() is True
+
+    reloaded.chain[1].action = "tampered"
+    assert reloaded.verify_chain() is False
