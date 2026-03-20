@@ -80,6 +80,7 @@ print(result)
 - **Alpha-Core Integration**: Connect with `ahi-operation-center` for centralized monitoring.
 - **Real ZK-SNARKs**: Replace mock implementation with `snarkjs` or `circom`.
 - **P2P Networking**: Decentralize the coordinator role.
+- **Feedback & Evolution**: See `FEEDBACK.md` for prioritized robustness and evolution recommendations.
 
 ## License
 
