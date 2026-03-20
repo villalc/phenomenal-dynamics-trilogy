@@ -30,7 +30,8 @@ def _build_counter(name: str, description: str, labelnames: List[str], registry:
             def inc(self, *args, **kwargs):
                 return None
         return _Dummy()
-    # registry=None avoids collisions in unit tests; callers can pass a shared registry to export metrics.
+    # registry=None registers on the global registry (can collide when multiple coordinators are created);
+    # pass a CollectorRegistry in tests/services to avoid duplicate metric names.
     reg = registry
     return CounterType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
 
