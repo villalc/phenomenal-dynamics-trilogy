@@ -31,7 +31,7 @@ def _build_counter(name: str, description: str, labelnames: List[str], registry:
                 return None
         return _Dummy()
     # registry=None avoids collisions in unit tests; callers can pass a shared registry to export metrics.
-    reg = registry if registry is not None else None
+    reg = registry
     return CounterType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
 
 
@@ -43,7 +43,7 @@ def _build_histogram(name: str, description: str, labelnames: List[str], registr
             def observe(self, *args, **kwargs):
                 return None
         return _Dummy()
-    reg = registry if registry is not None else None
+    reg = registry
     return HistogramType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
 
 @dataclass

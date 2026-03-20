@@ -100,8 +100,8 @@ class SwarmAgent:
     def destroy_private_key(self) -> None:
         """
         Best-effort removal of private key material from memory.
-        Nota: la recolección de basura en Python no es determinista; el material
-        puede permanecer en memoria hasta el próximo ciclo de GC.
+        Note: Python garbage collection is non-deterministic; material may stay
+        in memory until the next GC cycle.
         """
         self._private_key = None
 
