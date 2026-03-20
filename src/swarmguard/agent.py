@@ -34,7 +34,9 @@ class SwarmAgent:
         self.role = role
         self.trust_score = trust_score
         # Generate private key (simulated HSM) with secure RNG if not provided
-        self._private_key: Optional[ec.EllipticCurvePrivateKey] = private_key or ec.generate_private_key(ec.SECP256R1())
+        self._private_key: Optional[ec.EllipticCurvePrivateKey] = (
+            private_key if private_key is not None else ec.generate_private_key(ec.SECP256R1())
+        )
         self.public_key = self._private_key.public_key()
 
     def _require_private_key(self) -> ec.EllipticCurvePrivateKey:

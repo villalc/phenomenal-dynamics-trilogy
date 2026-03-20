@@ -17,7 +17,7 @@ try:  # pragma: no cover - optional dependency
     from prometheus_client import Counter as PromCounter, Histogram as PromHistogram
     CounterType: Optional[Any] = PromCounter
     HistogramType: Optional[Any] = PromHistogram
-except Exception:  # pragma: no cover - optional dependency
+except ImportError:  # pragma: no cover - optional dependency
     CounterType = None
     HistogramType = None
 
@@ -55,7 +55,7 @@ class SwarmCoordinator:
     def __init__(self, blockchain_path: Optional[str] = None):
         self.agents: Dict[str, SwarmAgent] = {}
         self.audit_trail: List[Dict[str, Any]] = [] # Detailed internal log
-        self.blockchain_log = BlockchainAuditLog(blockchain_path) # Immutable ledger
+        self.blockchain_log = BlockchainAuditLog(persistence_path=blockchain_path) # Immutable ledger
         self.proposals: Dict[str, Proposal] = {}
         self._consensus_counter = _build_counter(
             "swarm_consensus_total",

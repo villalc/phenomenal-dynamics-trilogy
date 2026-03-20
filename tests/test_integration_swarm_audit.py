@@ -30,5 +30,6 @@ def test_consensus_persists_audit_and_detects_tamper(tmp_path):
     assert reloaded.verify_chain() is True
     assert len(reloaded.chain) == 2
 
+    # Deliberately tamper with action to test integrity verification
     reloaded.chain[1].action = "tampered"
     assert reloaded.verify_chain() is False

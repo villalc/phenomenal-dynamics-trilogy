@@ -86,5 +86,6 @@ def test_audit_log_persistence_roundtrip(tmp_path):
     assert len(reloaded.chain) == 2
     assert reloaded.verify_chain() is True
 
+    # Deliberately tamper with action to test integrity verification
     reloaded.chain[1].action = "tampered"
     assert reloaded.verify_chain() is False
