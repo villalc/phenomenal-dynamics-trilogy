@@ -111,3 +111,9 @@ def test_audit_load_detects_tampered_file(tmp_path):
 
     with pytest.raises(AuditIntegrityError):
         BlockchainAuditLog(persistence_path=path)
+
+
+def test_verify_chain_rejects_missing_entry_hash():
+    log = BlockchainAuditLog()
+    log.chain[0].entry_hash = ""
+    assert log.verify_chain() is False

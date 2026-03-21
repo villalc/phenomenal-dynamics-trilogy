@@ -6,9 +6,10 @@ License: MIT
 
 import hashlib
 import json
+import os
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import Dict, List, Optional, Union
 
 class AuditIntegrityError(ValueError):
     """Raised when audit log integrity verification fails."""
@@ -22,8 +23,11 @@ class AuditEntry:
     prev_hash: str
     entry_hash: str = ""
 
+
+PathLike = Union[str, os.PathLike[str]]
+
 class BlockchainAuditLog:
-    def __init__(self, persistence_path: Optional[str] = None):
+    def __init__(self, persistence_path: Optional[PathLike] = None):
         self.chain: List[AuditEntry] = []
         self._persistence_path = Path(persistence_path) if persistence_path else None
         if self._persistence_path and self._persistence_path.exists():
@@ -94,7 +98,9 @@ class BlockchainAuditLog:
         """Verifies the entire chain integrity."""
         for i in range(len(self.chain)):
             current = self.chain[i]
-            if current.entry_hash and current.entry_hash != self._calculate_hash(current):
+            if not current.entry_hash:
+                return False
+            if current.entry_hash != self._calculate_hash(current):
                 return False
             if i == 0:
                 continue

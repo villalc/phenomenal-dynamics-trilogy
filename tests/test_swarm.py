@@ -55,3 +55,11 @@ def test_consensus_rejection():
     # Check blockchain log
     assert len(coord.blockchain_log.chain) == 2 # Genesis + 1 entry
     assert "self_destruct" in coord.blockchain_log.chain[1].action
+
+
+def test_default_metrics_are_safe_across_multiple_coordinators():
+    first = SwarmCoordinator()
+    second = SwarmCoordinator()
+
+    assert first.audit_trail == []
+    assert second.audit_trail == []

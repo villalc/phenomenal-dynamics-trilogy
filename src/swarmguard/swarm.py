@@ -23,30 +23,25 @@ except ImportError:  # pragma: no cover - optional dependency
 
 
 def _build_counter(name: str, description: str, labelnames: List[str], registry: Optional[Any]):
-    if CounterType is None:
+    if CounterType is None or registry is None:
         class _Dummy:
             def labels(self, *args, **kwargs):
                 return self
             def inc(self, *args, **kwargs):
                 return None
         return _Dummy()
-    # registry=None registers on the global registry (can collide when multiple coordinators are created);
-    # pass a CollectorRegistry (e.g., from prometheus_client import CollectorRegistry; registry = CollectorRegistry())
-    # in tests/services to avoid duplicate metric names.
-    reg = registry
-    return CounterType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
+    return CounterType(name, description, labelnames=labelnames, registry=registry)  # type: ignore[call-arg]
 
 
 def _build_histogram(name: str, description: str, labelnames: List[str], registry: Optional[Any]):
-    if HistogramType is None:
+    if HistogramType is None or registry is None:
         class _Dummy:
             def labels(self, *args, **kwargs):
                 return self
             def observe(self, *args, **kwargs):
                 return None
         return _Dummy()
-    reg = registry
-    return HistogramType(name, description, labelnames=labelnames, registry=reg)  # type: ignore[call-arg]
+    return HistogramType(name, description, labelnames=labelnames, registry=registry)  # type: ignore[call-arg]
 
 @dataclass
 class Proposal:
@@ -62,6 +57,7 @@ class SwarmCoordinator:
         self.audit_trail: List[Dict[str, Any]] = [] # Detailed internal log
         self.blockchain_log = BlockchainAuditLog(persistence_path=blockchain_path) # Immutable ledger
         self.proposals: Dict[str, Proposal] = {}
+        # Metrics are opt-in to avoid duplicate registrations on the global Prometheus registry.
         self._consensus_counter = _build_counter(
             "swarm_consensus_total",
             "Total consensus decisions by status",

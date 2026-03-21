@@ -6,7 +6,7 @@ License: MIT
 
 from dataclasses import dataclass
 from typing import Any, Dict, Optional
-from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.serialization import (
     BestAvailableEncryption,
@@ -34,10 +34,11 @@ class SwarmAgent:
         self.role = role
         self.trust_score = trust_score
         # Generate private key (simulated HSM) with secure RNG if not provided
-        self._private_key: Optional[ec.EllipticCurvePrivateKey] = (
+        private_key_value = (
             private_key if private_key is not None else ec.generate_private_key(ec.SECP256R1())
         )
-        self.public_key = self._private_key.public_key()
+        self._private_key: Optional[ec.EllipticCurvePrivateKey] = private_key_value
+        self.public_key = private_key_value.public_key()
 
     def _require_private_key(self) -> ec.EllipticCurvePrivateKey:
         if self._private_key is None:

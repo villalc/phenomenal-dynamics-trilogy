@@ -13,14 +13,12 @@
 ## Riesgos y brechas detectadas
 - **ZK simulado**: `zkp.py` usa una verificación simulada; falta circuito y pruebas end-to-end con un backend real (p. ej., `circom`/`snarkjs` o `pycircom`).
 - **Coordinador centralizado**: `SwarmCoordinator` es punto único de fallo; no hay gossip/P2P ni quorum distribuido.
-- **QA acotado**: las pruebas actuales son unitarias; no hay pruebas de integración/coordinador+agentes+auditoría ni cobertura sobre los motores fenomenológicos.
-- **Observabilidad y persistencia**: los logs blockchain son in-memory; no hay persistencia duradera ni métricas operativas (latencia, tasa de consenso, tasa de fallo de firmas).
+- **QA aún parcial**: ya existen pruebas de integración mínimas para coordinador+agentes+auditoría, pero sigue faltando ampliar cobertura sobre motores fenomenológicos, fallos distribuidos y escenarios ZK reales.
+- **Observabilidad y persistencia**: los logs blockchain ya se persisten en un fichero JSON y existen métricas opcionales vía Prometheus, pero siguen pendientes garantías de durabilidad/bloqueo del fichero, anclaje externo de la cadena de auditoría y métricas más completas/habilitadas por defecto en entornos gestionados.
 - **Gestión de claves**:
-  - Claves ECDSA generadas en caliente sin RNG criptográficamente seguro explícito.
-  - Sin integración con almacenes seguros (HSM, HashiCorp Vault o AWS KMS).
-  - Rotación de claves no implementada.
-  - Sin cifrado en reposo para material clave.
-  - No hay procedimientos de borrado seguro previo a migrar a HSM/Vault.
+  - La generación/rotación ECDSA y el cifrado en reposo básico ya existen, pero aún falta integración con almacenes seguros (HSM, HashiCorp Vault o AWS KMS).
+  - El borrado de claves actual es best-effort; no ofrece garantías fuertes de zeroización de memoria.
+  - Sigue pendiente formalizar políticas operativas de rotación, revocación y respuesta ante compromiso de claves.
 
 ## Propuesta priorizada
 ### 1) Robustez inmediata (1-2 sprints)
@@ -28,7 +26,7 @@
 - Incorporar **pruebas de integración** mínimas: `SwarmCoordinator` + 3 agentes + auditoría end-to-end con un payload tamperizado para asegurar rechazo y logging.
 - Persistir el **BlockchainAuditLog** en un backend simple (SQLite o `shelve`) con hash de continuidad, manteniendo compatibilidad in-memory para tests.
 - Exponer **métricas** (p. ej., con `prometheus_client`) para consenso, latencia de verificación y fallos de firma.
-- Endurecer la **gestión de claves** de corto plazo: generación con RNG seguro, cifrado en reposo, rotación mínima y borrado seguro antes de integrar HSM/Vault.
+- Endurecer la **gestión de claves** de corto plazo: complementar lo ya implementado (rotación básica, cifrado en reposo, borrado best-effort) con políticas de revocación, almacenamiento externo y zeroización más robusta antes de integrar HSM/Vault.
 
 ### 2) Evolución funcional (3-6 sprints)
 - Reemplazar el ZK simulado por un **circuito real** (`circom`/`snarkjs` o `pycircom`), con pruebas contra vectores conocidos y CI que ejecute verificación de prueba.
