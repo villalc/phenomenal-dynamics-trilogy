@@ -127,6 +127,7 @@ def test_audit_load_rejects_missing_entry_hash(tmp_path):
     log.append_entry(entry)
 
     data = json.loads(path.read_text())
+    # Index 1 is the first non-genesis entry persisted to disk.
     data[1]["entry_hash"] = ""
     path.write_text(json.dumps(data))
 
