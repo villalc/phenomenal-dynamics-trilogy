@@ -4,6 +4,8 @@ Registro IMPI: EXP-3495968
 License: MIT
 """
 
+import pytest
+
 from src.swarmguard.swarm import SwarmCoordinator
 from src.swarmguard.agent import SwarmAgent
 
@@ -61,5 +63,19 @@ def test_default_metrics_are_safe_across_multiple_coordinators():
     first = SwarmCoordinator()
     second = SwarmCoordinator()
 
-    assert first.audit_trail == []
-    assert second.audit_trail == []
+    proposal_one = first.propose_action("noop")
+    proposal_two = second.propose_action("noop")
+
+    assert first.execute_if_consensus(proposal_one) == "No agents to vote"
+    assert second.execute_if_consensus(proposal_two) == "No agents to vote"
+
+
+def test_metrics_can_be_registered_with_explicit_registry():
+    prometheus_client = pytest.importorskip("prometheus_client")
+    CollectorRegistry = prometheus_client.CollectorRegistry
+    registry = CollectorRegistry()
+    coord = SwarmCoordinator(metrics_registry=registry)
+
+    metric_names = {metric.name for metric in registry.collect()}
+    assert "swarm_consensus" in metric_names
+    assert "swarm_consensus_latency_seconds" in metric_names

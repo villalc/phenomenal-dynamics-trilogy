@@ -113,7 +113,22 @@ def test_audit_load_detects_tampered_file(tmp_path):
         BlockchainAuditLog(persistence_path=path)
 
 
-def test_verify_chain_rejects_missing_entry_hash():
-    log = BlockchainAuditLog()
-    log.chain[0].entry_hash = ""
-    assert log.verify_chain() is False
+def test_audit_load_rejects_missing_entry_hash(tmp_path):
+    path = tmp_path / "audit.json"
+    log = BlockchainAuditLog(persistence_path=path)
+
+    entry = AuditEntry(
+        timestamp="2025-01-01T12:00:00",
+        agent_id="agent1",
+        action="login",
+        proof_hash="abc",
+        prev_hash=log.get_last_hash(),
+    )
+    log.append_entry(entry)
+
+    data = json.loads(path.read_text())
+    data[1]["entry_hash"] = ""
+    path.write_text(json.dumps(data))
+
+    with pytest.raises(AuditIntegrityError):
+        BlockchainAuditLog(persistence_path=path)
