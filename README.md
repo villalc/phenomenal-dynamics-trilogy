@@ -37,14 +37,8 @@ graph TD
 ## Installation
 
 ```bash
-pip install sovereign-swarmguard
-```
-
-Or for development:
-
-```bash
-git clone https://github.com/ahi-governance/sovereign-swarmguard.git
-cd sovereign-swarmguard
+git clone https://github.com/villalc/phenomenal-dynamics-trilogy.git
+cd phenomenal-dynamics-trilogy
 pip install -e .
 ```
 
@@ -77,7 +71,7 @@ print(result)
 
 ## Roadmap
 
-- **Alpha-Core Integration**: Connect with `ahi-operation-center` for centralized monitoring.
+- **Frontier/Shadow Hardening**: Expand schema validation, signing options, and private handoff automation.
 - **Real ZK-SNARKs**: Replace mock implementation with `snarkjs` or `circom`.
 - **P2P Networking**: Decentralize the coordinator role.
 
