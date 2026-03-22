@@ -1,0 +1,43 @@
+{
+  "run_id": "Frontier_v2_2_report:seed-1:run-2",
+  "profile": "seed-1",
+  "experiment": "Frontier_v2_2_report",
+  "created_at": "2026-03-22T04:55:45.295990+00:00",
+  "signals": [
+    {
+      "run_id": "Frontier_v2_2_report:seed-1:run-2",
+      "cycle": 2500,
+      "integrity": 1.0,
+      "stress": 0.2737,
+      "resonance": 0.4385,
+      "sleep_debt": 0.45,
+      "canonical_promotions": 0,
+      "exploratory_promotions": 0,
+      "mode": "STRESSED",
+      "note": "ingested:Frontier_v2_2_report",
+      "timestamp": "2026-03-22T04:55:45.295990+00:00"
+    }
+  ],
+  "decisions": [
+    {
+      "run_id": "Frontier_v2_2_report:seed-1:run-2",
+      "cycle": 2500,
+      "action": "observe",
+      "reason": "insufficient confidence for promotion",
+      "confidence": 0.55,
+      "timestamp": "2026-03-22T04:55:45.295990+00:00"
+    }
+  ],
+  "metadata": {
+    "source_artifact": "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\artifacts\\Frontier_v2_2_report.json",
+    "schema": "runs",
+    "run_index": "2"
+  },
+  "summary": {
+    "run_id": "Frontier_v2_2_report:seed-1:run-2",
+    "signals": 1,
+    "decisions": 1,
+    "sleep_debt_mean": 0.45,
+    "integrity_mean": 1.0
+  }
+}

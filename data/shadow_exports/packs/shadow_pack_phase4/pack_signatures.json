@@ -1,0 +1,382 @@
+{
+  "pack_dir": "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "file": "manifests\\Frontier_v2_1_report_seed-1_run-1_shadow_manifest.json",
+      "sha256": "29e88d1ed4392f2ca36bd10d090a9ea34109c52e36bf5938b7d5251638fa84d7"
+    },
+    {
+      "file": "manifests\\Frontier_v2_1_report_seed-1_run-2_shadow_manifest.json",
+      "sha256": "5712d3ed746a29dfae41f96bcab917500370e3e290dc2b6b35b977d2f9583e2a"
+    },
+    {
+      "file": "manifests\\Frontier_v2_1_report_seed-1_run-3_shadow_manifest.json",
+      "sha256": "abd0b6eedd9740f658955c71719eb40431133e83027431f3fc041c5ab733edbd"
+    },
+    {
+      "file": "manifests\\Frontier_v2_1_report_seed-1_run-4_shadow_manifest.json",
+      "sha256": "b4c4ed8febd18518cdfc716e901edebe6e986232efbac4adb9e2e4b4a3f21d8f"
+    },
+    {
+      "file": "manifests\\Frontier_v2_2_report_seed-1_run-1_shadow_manifest.json",
+      "sha256": "112ccb1979126d1c6f3dc9915c1d3b620fb18c267acc8f73f07e683a6b276f27"
+    },
+    {
+      "file": "manifests\\Frontier_v2_2_report_seed-1_run-2_shadow_manifest.json",
+      "sha256": "100e292d4616c09b84412d0d4ee5ad356387673565d80d2811d4c4bffb3ce31a"
+    },
+    {
+      "file": "manifests\\Frontier_v2_2_report_seed-1_run-3_shadow_manifest.json",
+      "sha256": "c8bee00b18a7c8370fc1262b3bd5af03c79bfd75fdb3f3d034bd1614a00df0e9"
+    },
+    {
+      "file": "manifests\\Frontier_v2_2_report_seed-1_run-4_shadow_manifest.json",
+      "sha256": "091cde8f5d8b50561f6e7591a72e64965dcabd07181bb5e669f4fc2dae2da372"
+    },
+    {
+      "file": "manifests\\Frontier_v2_3_report_seed-1_run-1_shadow_manifest.json",
+      "sha256": "6f8d3e8be75a28e62523ad333ca91e04c26702271974bab0e59ccda432866f6e"
+    },
+    {
+      "file": "manifests\\Frontier_v2_3_report_seed-1_run-2_shadow_manifest.json",
+      "sha256": "d0467655e49e8afb4855e36024ff6f269ec3038cd2962377a52fd2fd59e2e25a"
+    },
+    {
+      "file": "manifests\\Frontier_v2_3_report_seed-1_run-3_shadow_manifest.json",
+      "sha256": "6ac5c18b6ddf420d8219d813424d5e18983ec8f39b5c82e73f486f7eaf38e7f2"
+    },
+    {
+      "file": "manifests\\Frontier_v2_3_report_seed-1_run-4_shadow_manifest.json",
+      "sha256": "acaf1898d8c84c16a61949514a277030ffeed437f7af25950783369d2b366c98"
+    },
+    {
+      "file": "manifests\\Frontier_v2_4_report_seed-1_run-1_shadow_manifest.json",
+      "sha256": "9f24a744f1fe1e210b8710f15485cd0beff513b79fc8f9f09b9b306309f63119"
+    },
+    {
+      "file": "manifests\\Frontier_v2_4_report_seed-1_run-2_shadow_manifest.json",
+      "sha256": "614af6cf608f94a8bfae975e72aa40338ce2f61b5ab948c1b38151cd964cc600"
+    },
+    {
+      "file": "manifests\\Frontier_v2_4_report_seed-1_run-3_shadow_manifest.json",
+      "sha256": "26219fccd0c6fcc52dcc759e26f2e17fe415cd71b941f73d383212ea1b17b171"
+    },
+    {
+      "file": "manifests\\Frontier_v2_4_report_seed-1_run-4_shadow_manifest.json",
+      "sha256": "3b58192da4455e63d3d0791261c4eb2cab5efef870f802e551bd07cd48d06f25"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-1_shadow_manifest.json",
+      "sha256": "e9b139e86ed10005987faa14ca44dacc84720cc4b663ba65ac16d01db91b8d1d"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-2_shadow_manifest.json",
+      "sha256": "3eaaf8211422a4dc1d244ed977d88d48591ba2a92a06e7e22d52171339ea8ac3"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-3_shadow_manifest.json",
+      "sha256": "b642ffbd8d84f97cf3d226754a3bc5f56f8c7e21c4abf11ef720001e23c2cd2d"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-4_shadow_manifest.json",
+      "sha256": "39c28bd663e01f4dc31eb5c990aaf5aa0ebbebb2a087e7e4e7412d9b3d221ccc"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-1_shadow_manifest.json",
+      "sha256": "4ffa74d5c7bd5317e65d3da601b14e5baeaa6365902391a9995053568c37b489"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-2_shadow_manifest.json",
+      "sha256": "1bde09e70c294a3139a6efffbca107e8dcd44cf9c3c8762cc43b79b74082bade"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-3_shadow_manifest.json",
+      "sha256": "349d4455901269d220686d6b100a4c585e7adfe7f763151636a4da33cbc64205"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-4_shadow_manifest.json",
+      "sha256": "8098266b4b2b3e137aa3b4b25aee8bd389c396076c94f04fea575ff13a821c6c"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-1_shadow_manifest.json",
+      "sha256": "b9126f37fb978d3e5b51b9487e3b14b5a9c1d28db32bf8d66a0e5014284ec649"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-2_shadow_manifest.json",
+      "sha256": "129ba3f2fe73eefdad2131865d15426b8fa4e9dc18814949d2489a4bbb690a24"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-3_shadow_manifest.json",
+      "sha256": "22a39edf0117d498007643ccf05814c9386c75a47f996ae9c3374a25ce4a7867"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-4_shadow_manifest.json",
+      "sha256": "7ffdc7f2e63320f4603f25006acb346823d7470094abfa568ad12a3df7ece0ed"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-1_shadow_manifest.json",
+      "sha256": "037154507363061490c7b59cc3fda02ad4929d8fa878014f9fe4f12a855975ac"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-2_shadow_manifest.json",
+      "sha256": "4c176ff7e17bb42020dfe1c9e29b4400369caa877e21597a27499aad61032439"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-3_shadow_manifest.json",
+      "sha256": "c076afb02119022ca073646a51a713e0a01355c0f666034574e244ef9dcec398"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-4_shadow_manifest.json",
+      "sha256": "d8a10fbe04894f23bbcf7add4312e8a026127822705a3aacb86ed51be9d7ec3d"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-1_shadow_manifest.json",
+      "sha256": "709b5151b9efc39b51123e7cfc7da42997d7972de4e154dbc7e9a0d6529553cd"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-2_shadow_manifest.json",
+      "sha256": "1330113e31f850e4c2aa02259aef7f6ee78f0fa9085f794c4835d4a48febed70"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-3_shadow_manifest.json",
+      "sha256": "c481fbeb3c34f8a3bccd91bc55b4bb04f4be8edf03d339ff428dff6de8e5e198"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-4_shadow_manifest.json",
+      "sha256": "9ee3164afee59e31dc2f7a99f3ac2d8ab21910b60d097a828af73b88a9df5293"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-1_shadow_manifest.json",
+      "sha256": "9f4a6f99da56c0a989647616281ca4c02e8b00291d3a8c8bf51f8de86064b124"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-2_shadow_manifest.json",
+      "sha256": "52a7a4edf68777c6ac1a8ca1024d4795490bc43d2f8316e95ad141dd93380000"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-3_shadow_manifest.json",
+      "sha256": "81f149db58f6e3ef169e20ef7f1c9cc85db8c3ba2b4b532f9a63ec34afc475f5"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-4_shadow_manifest.json",
+      "sha256": "d0c90f75cdb403884b06989ee1fdd9e75f9d3e3ce5bb0922e34cc71f96e73c56"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-1_shadow_manifest.json",
+      "sha256": "370298f4ca6dee532dd938d9e9a81a32ddccd262c885b41be8b814d61fffbfec"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-2_shadow_manifest.json",
+      "sha256": "a7f5d30f2ba088a62362f7052d259880fca1c3480fa3da3005a73502480805aa"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-3_shadow_manifest.json",
+      "sha256": "fb6e5d2b8478ac1b7235a4d7d7f541e90f09cae4cfbd43e2e184d880d52ac3fb"
+    },
+    {
+      "file": "manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-4_shadow_manifest.json",
+      "sha256": "4add213aaac6cceea98ba835ea69862d8a9994856ab76113dd875df0cfddc8d0"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-1_run-11_shadow_manifest.json",
+      "sha256": "d4ec81405bcc8d9594b3a53d5e58400ff77720febfa3468620e43742541097bb"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-1_run-1_shadow_manifest.json",
+      "sha256": "3059adf8e48af68768774c16eb9812cc2bb9d20902d6eb126a69c9425c402305"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-1_run-6_shadow_manifest.json",
+      "sha256": "5d043439e1ac9c8a98dfb9751ddd1ef3e5f4309244c96f9ac0e173ddc54b0a82"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-2_run-12_shadow_manifest.json",
+      "sha256": "e82e692f1cfa46c8c5269188f28cb651b6aecbc22d2fcc93d85de2c00f819986"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-2_run-2_shadow_manifest.json",
+      "sha256": "e5683ae1825bbfe2dfd7f82c17c7d840909df0ae2280b5957481cd37a5c1460c"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-2_run-7_shadow_manifest.json",
+      "sha256": "644cfce842cfc7a239dae240064eb4884b7b7a49eaf40f1c047893eee4e739c0"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-3_run-13_shadow_manifest.json",
+      "sha256": "fbff77978276c12cf4022737883721d675b47f5752121be83f4534a3302522f6"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-3_run-3_shadow_manifest.json",
+      "sha256": "bbba7e0b491b22dd00e2a3f71002a8b2901feaa2cb5f2653d68fdb640c7ecd27"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-3_run-8_shadow_manifest.json",
+      "sha256": "be796652c3537ee71283771aca600ec95b25a1ceaf65b9ab6630ef59f1673028"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-4_run-14_shadow_manifest.json",
+      "sha256": "a56b1e70a593b257cb759a77c7ddd05245b28ac83e319d43269fec11d2ee6630"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-4_run-4_shadow_manifest.json",
+      "sha256": "371c363550b6f7d3e09b254e4ec773bd915705ab695a90471cef117ec7d59643"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-4_run-9_shadow_manifest.json",
+      "sha256": "75c55e3d4f1c1b1116e850c27ae33030784d59ed2477cffe6931a3b247b91093"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-5_run-10_shadow_manifest.json",
+      "sha256": "9c025235c780e3debbd0e93adf817a30f51848f08c4a5649dc615681cb835450"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-5_run-15_shadow_manifest.json",
+      "sha256": "35d086f76fa44806bb3c42e3aa0fc4c857b1260ad5f2a25d9f599938e252d8b2"
+    },
+    {
+      "file": "manifests\\Frontier_v2_report_seed-5_run-5_shadow_manifest.json",
+      "sha256": "30f67679f9cab58386007ef7380085342a85329cdabbc04d15c0fb5593ef66c7"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-1_shadow_manifest.json",
+      "sha256": "d6b1d64c360c26058885aaa826a9738686e1c46815a8e5d3816a1566f920aa69"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-2_shadow_manifest.json",
+      "sha256": "bac8d97087364a48b6c97928fa077c0cc8d6b03f5581ab69196515edc9c0d9f7"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-3_shadow_manifest.json",
+      "sha256": "639f0ad8de1af170b7bd47e45b8460a9b209930ae8b1a7f34df7ec362ac54812"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-4_shadow_manifest.json",
+      "sha256": "71dcde8095706585939d576d1cdb7cefd546341fef02a9e39b11dc5cad41cf8d"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-1_shadow_manifest.json",
+      "sha256": "a3ad8a3d0ac09381c5c4409f67b48e88936bab867a342fdd96fb649cc568a135"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-2_shadow_manifest.json",
+      "sha256": "56f5d001cab5b2afe3a57b46a9b99f5d8569cc6cc98554008b92f993cec18fba"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-3_shadow_manifest.json",
+      "sha256": "ccfa4b2cbd39d96f106f8b7cbcdc44c29b0c628a737e4dcce15dc57a424ac769"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-4_shadow_manifest.json",
+      "sha256": "f6e9869874514c522ed3eb744b1bd4759874e9a9457dde4a585d6cc9913179ed"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-1_shadow_manifest.json",
+      "sha256": "268d1b01c57a3650f3ac3d55cc1f12c5c2c9ab1341a065ed25b6bc6f0bde1090"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-2_shadow_manifest.json",
+      "sha256": "058e9cbc8c2738c2a5b6c4457b4893b7c2fb00892b412f91aa4e72faa0df9de8"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-3_shadow_manifest.json",
+      "sha256": "745d2e4fd60dfec1690c2620231477173f27131e9dd0915e6866aaa75317f461"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-4_shadow_manifest.json",
+      "sha256": "2ad956c4098e41c20c85a65a7562425002ae50c267cd6df84253f556f0f9fb45"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-1_shadow_manifest.json",
+      "sha256": "deb6614e4dfd87f03a8f95d9745b200fe1e432b565fcffcb2c1b3e6a66f60ded"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-2_shadow_manifest.json",
+      "sha256": "9a7478d63eb0d4a426c2e3414820b4b616c976fb15c1920234922e6294e66384"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-3_shadow_manifest.json",
+      "sha256": "4ab093db6c38aa302bf2a20906d4983bcd0de93d4c09c9ebc2d2f774e8bd397c"
+    },
+    {
+      "file": "manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-4_shadow_manifest.json",
+      "sha256": "cf1cc269df26decf6a5801d5ff70c69980267cadbd36dcddca581811d6bafab3"
+    },
+    {
+      "file": "manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-1_shadow_manifest.json",
+      "sha256": "3d73dc97e2f80a93dd9455bfb220810a0334d9a901d97f31a0e85ebfdf05d9f9"
+    },
+    {
+      "file": "manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-2_shadow_manifest.json",
+      "sha256": "37c8282d23338b3ea6ebe6d36059a1606279cdd323963b74bcb71e690af6c80c"
+    },
+    {
+      "file": "manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-3_shadow_manifest.json",
+      "sha256": "51c69f763cd96dd7c7210ff265dfc60c820c70770aa1a74352bf8ae7930b6214"
+    },
+    {
+      "file": "manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-4_shadow_manifest.json",
+      "sha256": "d3d8de79c3dcd20e1a06684044cec4733bff2c2ff53c3e8da7f7686bbffd5067"
+    },
+    {
+      "file": "manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-1_shadow_manifest.json",
+      "sha256": "2b6b0ad04f0a52f81c57902247fce3b87150fd81e84bac76a92d2340af2c6174"
+    },
+    {
+      "file": "manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-2_shadow_manifest.json",
+      "sha256": "3abe719803a1ed8f6cb89d286998c17a3e52f08775d6e2d81604320cfb1b38b0"
+    },
+    {
+      "file": "manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-3_shadow_manifest.json",
+      "sha256": "d7a9069400ea098a33431ae800f46d09f90ed4ac14771d3fd4d089c32d1d13f7"
+    },
+    {
+      "file": "manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-4_shadow_manifest.json",
+      "sha256": "1defd5180226757e8c76676f71d43495018498210ec9ee7338b514a9f391c521"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_baseline-control_run-1_shadow_manifest.json",
+      "sha256": "07d7cf7496612d28fdd5be4a74f703867ad9edd1a23f37933aeb9f42406af19d"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_baseline-control_run-2_shadow_manifest.json",
+      "sha256": "4f68621ee9bc963abfdd1bad0d3702d3271fc5433b16b0557086ce90dda53210"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_baseline-control_run-3_shadow_manifest.json",
+      "sha256": "f288019a15782e7276f428bd63e9a4e12f3d3cc333f1895698f276ae502c4505"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_intentional-collapse_run-1_shadow_manifest.json",
+      "sha256": "ece11e301d1243ab9fda6195485dcae074dbca0da763c8dd8ab5239aadbbfdca"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_intentional-collapse_run-2_shadow_manifest.json",
+      "sha256": "e4a4d05ccd61f7d60f2612760f64f8b9439f097b5bb3d66d0079e287a198551b"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_intentional-collapse_run-3_shadow_manifest.json",
+      "sha256": "960fa1481887d7cca1175296136b776b87a563c00aa0c50edeb1a2fa1495d0d3"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_rescue-under-collapse_run-1_shadow_manifest.json",
+      "sha256": "d13114da57fbfc525693f3036d68358934c1c71439143d4c08c9d37293159969"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_rescue-under-collapse_run-2_shadow_manifest.json",
+      "sha256": "39388e4c1007aa5c1470dc23d376e71c7b34c31aaa48abd51b733d60d79be632"
+    },
+    {
+      "file": "manifests\\Frontier_v4_3_shadow_sigma_falsification_report_rescue-under-collapse_run-3_shadow_manifest.json",
+      "sha256": "707082fa2863038aa60171026158c02d99e23d5894b6a910cb41fc776b3a373a"
+    },
+    {
+      "file": "pack_index.json",
+      "sha256": "d1ecc321ac0f2aca8dfa0ded32529ffc0820dbd62d457da4c964f9f935cf5a9f"
+    },
+    {
+      "file": "executive_summary.md",
+      "sha256": "fd33878987687446a2613f43e89bdaac3a25beab556a4b763dae45acdee84406"
+    }
+  ]
+}

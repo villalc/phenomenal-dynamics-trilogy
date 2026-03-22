@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "pack_name": "shadow_pack_phase4",
+  "source_manifest_dir": "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\frontier_ingest",
+  "manifest_count": 92,
+  "summary": {
+    "total_manifests": 92,
+    "integrity_mean": 0.9646,
+    "sleep_debt_mean": 0.0925,
+    "profiles": {
+      "seed-1": 19,
+      "v2.5shadow": 4,
+      "v2.6shadow": 4,
+      "v2.7shadow": 4,
+      "v2.8shadow": 4,
+      "v2.9shadow": 8,
+      "v3.0shadow": 8,
+      "v3.1shadow": 8,
+      "seed-2": 3,
+      "seed-3": 3,
+      "seed-4": 3,
+      "seed-5": 3,
+      "v3.2shadow": 4,
+      "shadow": 8,
+      "baseline-control": 3,
+      "intentional-collapse": 3,
+      "rescue-under-collapse": 3
+    },
+    "experiments": {
+      "Frontier_v2_1_report": 4,
+      "Frontier_v2_2_report": 4,
+      "Frontier_v2_3_report": 4,
+      "Frontier_v2_4_report": 4,
+      "Frontier_v2_5_shadow_campaign_report": 28,
+      "Frontier_v2_report": 15,
+      "Frontier_v3_2_shadow_report": 16,
+      "Frontier_v3_4_shadow_neutral_report": 4,
+      "Frontier_v4_0_shadow_emergent_skeleton_report": 4,
+      "Frontier_v4_3_shadow_sigma_falsification_report": 9
+    },
+    "top_profiles": [
+      [
+        "seed-1",
+        19
+      ],
+      [
+        "v2.9shadow",
+        8
+      ],
+      [
+        "v3.0shadow",
+        8
+      ],
+      [
+        "v3.1shadow",
+        8
+      ],
+      [
+        "shadow",
+        8
+      ],
+      [
+        "v2.5shadow",
+        4
+      ],
+      [
+        "v2.6shadow",
+        4
+      ],
+      [
+        "v2.7shadow",
+        4
+      ],
+      [
+        "v2.8shadow",
+        4
+      ],
+      [
+        "v3.2shadow",
+        4
+      ]
+    ],
+    "top_experiments": [
+      [
+        "Frontier_v2_5_shadow_campaign_report",
+        28
+      ],
+      [
+        "Frontier_v3_2_shadow_report",
+        16
+      ],
+      [
+        "Frontier_v2_report",
+        15
+      ],
+      [
+        "Frontier_v4_3_shadow_sigma_falsification_report",
+        9
+      ],
+      [
+        "Frontier_v2_1_report",
+        4
+      ],
+      [
+        "Frontier_v2_2_report",
+        4
+      ],
+      [
+        "Frontier_v2_3_report",
+        4
+      ],
+      [
+        "Frontier_v2_4_report",
+        4
+      ],
+      [
+        "Frontier_v3_4_shadow_neutral_report",
+        4
+      ],
+      [
+        "Frontier_v4_0_shadow_emergent_skeleton_report",
+        4
+      ]
+    ]
+  },
+  "validation_errors": {},
+  "files": [
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_1_report_seed-1_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_1_report_seed-1_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_1_report_seed-1_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_1_report_seed-1_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_2_report_seed-1_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_2_report_seed-1_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_2_report_seed-1_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_2_report_seed-1_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_3_report_seed-1_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_3_report_seed-1_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_3_report_seed-1_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_3_report_seed-1_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_4_report_seed-1_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_4_report_seed-1_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_4_report_seed-1_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_4_report_seed-1_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.5shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.6shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.7shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.8shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v2.9shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.0shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_5_shadow_campaign_report_v3.1shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-1_run-11_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-1_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-1_run-6_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-2_run-12_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-2_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-2_run-7_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-3_run-13_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-3_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-3_run-8_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-4_run-14_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-4_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-4_run-9_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-5_run-10_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-5_run-15_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v2_report_seed-5_run-5_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v2.9shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.0shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.1shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_2_shadow_report_v3.2shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v3_4_shadow_neutral_report_shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_0_shadow_emergent_skeleton_report_shadow_run-4_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_baseline-control_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_baseline-control_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_baseline-control_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_intentional-collapse_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_intentional-collapse_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_intentional-collapse_run-3_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_rescue-under-collapse_run-1_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_rescue-under-collapse_run-2_shadow_manifest.json",
+    "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\phenomenal-dynamics-trilogy\\data\\shadow_exports\\packs\\shadow_pack_phase4\\manifests\\Frontier_v4_3_shadow_sigma_falsification_report_rescue-under-collapse_run-3_shadow_manifest.json"
+  ]
+}

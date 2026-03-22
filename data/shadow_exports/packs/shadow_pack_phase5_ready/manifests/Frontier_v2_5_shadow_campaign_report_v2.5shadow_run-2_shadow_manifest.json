@@ -1,0 +1,43 @@
+{
+  "run_id": "Frontier_v2_5_shadow_campaign_report:v2.5shadow:run-2",
+  "profile": "v2.5shadow",
+  "experiment": "Frontier_v2_5_shadow_campaign_report",
+  "created_at": "2026-03-22T04:55:45.573405+00:00",
+  "signals": [
+    {
+      "run_id": "Frontier_v2_5_shadow_campaign_report:v2.5shadow:run-2",
+      "cycle": 2,
+      "integrity": 1.0,
+      "stress": 0.2617,
+      "resonance": 0.5342,
+      "sleep_debt": 0.48,
+      "canonical_promotions": 0,
+      "exploratory_promotions": 3,
+      "mode": "STRESSED",
+      "note": "ingested:Frontier_v2_5_shadow_campaign_report",
+      "timestamp": "2026-03-22T04:55:45.573405+00:00"
+    }
+  ],
+  "decisions": [
+    {
+      "run_id": "Frontier_v2_5_shadow_campaign_report:v2.5shadow:run-2",
+      "cycle": 2,
+      "action": "observe",
+      "reason": "insufficient confidence for promotion",
+      "confidence": 0.55,
+      "timestamp": "2026-03-22T04:55:45.573405+00:00"
+    }
+  ],
+  "metadata": {
+    "source_artifact": "c:\\Users\\lcvev\\Desktop\\Exploracion Quantum\\artifacts\\Frontier_v2_5_shadow_campaign_report.json",
+    "schema": "variants",
+    "run_index": "2"
+  },
+  "summary": {
+    "run_id": "Frontier_v2_5_shadow_campaign_report:v2.5shadow:run-2",
+    "signals": 1,
+    "decisions": 1,
+    "sleep_debt_mean": 0.48,
+    "integrity_mean": 1.0
+  }
+}
