@@ -1,4 +1,9 @@
-# Release Notes · Migracion a Privado (Shadow)
+# Release Notes · Migración a Privado (Shadow)
+
+## Resumen ejecutivo
+- Estado general: **Éxito operativo en baseline Shadow**.
+- Decisión recomendada: avanzar con el traslado controlado al entorno privado, manteniendo validación de esquema y firma de pack en cada corte.
+- Evidencia clave: 92 manifiestos ingeridos, `invalid_count = 0`, paquete firmado con SHA-256.
 
 ## Corte
 - Fecha: 2026-03-21

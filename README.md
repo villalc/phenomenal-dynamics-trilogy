@@ -10,6 +10,12 @@ License: MIT
 
 Part of the [AHI Governance Labs](https://ahigovernance.com) ecosystem.
 
+## Executive Snapshot
+
+- **Current repository of record**: https://github.com/villalc/phenomenal-dynamics-trilogy
+- **Operational focus**: Frontier/Shadow ingestion, policy-driven decisions, portable signed packs
+- **Validation posture**: reproducible manifests, schema checks, and auditable transfer artifacts
+
 ## Overview
 
 Sovereign SwarmGuard provides a decentralized, verifiable defense mechanism for critical systems. It employs a swarm of autonomous agents that collaborate to detect threats and execute defensive actions through a consensus mechanism.
