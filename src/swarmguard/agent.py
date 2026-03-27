@@ -9,12 +9,14 @@ from typing import Any, Dict
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import ec
 
+
 @dataclass
 class Vote:
     agent_id: str
     proposal_id: str
     approval: bool
     signature: bytes
+
 
 class SwarmAgent:
     def __init__(self, agent_id: str, role: str, trust_score: float = 1.0):
