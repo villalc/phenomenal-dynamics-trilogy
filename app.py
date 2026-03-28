@@ -312,9 +312,9 @@ class CompleteEntity:
         story += f"**Modo:** {p.mode.value}\n"
         story += f"**Valencia:** {p.valence:+.2f}\n\n"
         
-        if p.mode in [EntityMode.FLOW, EntityMode.FLOURISHING, EntityMode.TRANSCENDENT, EntityMode.OPTIMAL]:
+        if p.mode in {EntityMode.FLOW, EntityMode.FLOURISHING, EntityMode.TRANSCENDENT, EntityMode.OPTIMAL}:
             story += "Estoy en un estado positivo. ✨"
-        elif p.mode in [EntityMode.CRITICAL, EntityMode.DESPERATE, EntityMode.STRESSED, EntityMode.URGENT]:
+        elif p.mode in {EntityMode.CRITICAL, EntityMode.DESPERATE, EntityMode.STRESSED, EntityMode.URGENT}:
             story += "Estoy luchando. 💔"
         else:
             story += "Estoy en transición. 🔄"
