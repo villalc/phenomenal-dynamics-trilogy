@@ -1,6 +1,13 @@
+"""
+© 2025-2026 AHI 3.0 · AHI Governance Labs
+Registro IMPI: EXP-3495968
+License: MIT
+"""
+
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -8,9 +15,10 @@ from .shadow_models import ShadowDecision, ShadowRunManifest, ShadowSignal
 
 
 def _safe_file_name(value: str) -> str:
-    cleaned = value
-    for token in ['<', '>', ':', '"', '/', '\\', '|', '?', '*']:
-        cleaned = cleaned.replace(token, "_")
+    # Replace '..' with '__' to prevent path traversal
+    cleaned = value.replace("..", "__")
+    # Restrict to alphanumeric, underscore, and hyphen
+    cleaned = re.sub(r"[^a-zA-Z0-9_\-]", "_", cleaned)
     return cleaned
 
 
