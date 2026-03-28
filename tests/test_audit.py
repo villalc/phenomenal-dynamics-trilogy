@@ -67,3 +67,26 @@ def test_audit_log_append_invalid_prev_hash():
 
     with pytest.raises(ValueError):
         log.append_entry(entry_invalid)
+
+def test_audit_log_export_chain():
+    from dataclasses import asdict
+    log = BlockchainAuditLog()
+
+    # Check genesis export
+    exported = log.export_chain()
+    assert len(exported) == 1
+    assert exported[0] == asdict(log.chain[0])
+
+    # Append an entry and check export again
+    entry1 = AuditEntry(
+        timestamp="2025-01-01T12:00:00",
+        agent_id="agent1",
+        action="login",
+        proof_hash="abc",
+        prev_hash=log.get_last_hash()
+    )
+    log.append_entry(entry1)
+
+    exported = log.export_chain()
+    assert len(exported) == 2
+    assert exported[1] == asdict(entry1)
