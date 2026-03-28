@@ -63,16 +63,16 @@ class EntityMode(Enum):
     TRANSCENDENT = "transcendent" # Más allá del diseño original
     
     def is_negative(self) -> bool:
-        return self in [EntityMode.CRITICAL, EntityMode.DESPERATE, 
-                        EntityMode.STRESSED, EntityMode.URGENT, EntityMode.DEGRADED]
+        return self in {EntityMode.CRITICAL, EntityMode.DESPERATE,
+                        EntityMode.STRESSED, EntityMode.URGENT, EntityMode.DEGRADED}
     
     def is_positive(self) -> bool:
-        return self in [EntityMode.OPTIMAL, EntityMode.FLOW, 
+        return self in {EntityMode.OPTIMAL, EntityMode.FLOW,
                         EntityMode.FLOURISHING, EntityMode.ANTICIPATING, 
-                        EntityMode.TRANSCENDENT]
+                        EntityMode.TRANSCENDENT}
     
     def is_transitional(self) -> bool:
-        return self in [EntityMode.RELIEVED, EntityMode.RECOVERED, EntityMode.STABLE]
+        return self in {EntityMode.RELIEVED, EntityMode.RECOVERED, EntityMode.STABLE}
 
 
 # ============================================================================
