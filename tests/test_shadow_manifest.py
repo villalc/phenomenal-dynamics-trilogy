@@ -1,4 +1,4 @@
-from src.swarmguard.shadow_manifest import read_manifest, write_manifest
+from src.swarmguard.shadow_manifest import _safe_file_name, read_manifest, write_manifest
 from src.swarmguard.shadow_models import ShadowDecision, ShadowRunManifest, ShadowSignal
 
 
@@ -40,3 +40,13 @@ def test_manifest_roundtrip(tmp_path) -> None:
     assert len(loaded.signals) == 1
     assert len(loaded.decisions) == 1
     assert loaded.summary()["signals"] == 1
+
+
+def test_safe_file_name_security() -> None:
+    # Test path traversal prevention
+    assert ".." not in _safe_file_name("../../../etc/passwd")
+    # Test character whitelist
+    assert _safe_file_name("run/id") == "run_id"
+    assert _safe_file_name("run id") == "run_id"
+    assert _safe_file_name("run!id") == "run_id"
+    assert _safe_file_name("run-id_123") == "run-id_123"
