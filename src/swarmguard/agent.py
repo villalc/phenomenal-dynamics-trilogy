@@ -4,6 +4,7 @@ Registro IMPI: EXP-3495968
 License: MIT
 """
 
+import json
 from dataclasses import dataclass
 from typing import Any, Dict
 from cryptography.hazmat.primitives import hashes
@@ -61,7 +62,13 @@ class SwarmAgent:
         """
         approval = self.trust_score >= 0.5
         # The vote itself should be signed
-        vote_data = f"{self.agent_id}:{proposal.get('id')}:{approval}"
+        # Use canonical JSON serialization to prevent signature forgery
+        vote_payload = {
+            "agent_id": self.agent_id,
+            "proposal_id": proposal.get('id'),
+            "approval": approval
+        }
+        vote_data = json.dumps(vote_payload, sort_keys=True, separators=(',', ':'))
         signature = self._private_key.sign(
             vote_data.encode(),
             ec.ECDSA(hashes.SHA256())

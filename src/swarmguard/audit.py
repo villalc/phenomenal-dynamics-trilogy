@@ -24,7 +24,9 @@ class BlockchainAuditLog:
         self._append_genesis()
 
     def _calculate_hash(self, entry: AuditEntry) -> str:
-        entry_str = f"{entry.timestamp}{entry.agent_id}{entry.action}{entry.proof_hash}{entry.prev_hash}"
+        # Use canonical JSON serialization to prevent hash collisions
+        entry_data = asdict(entry)
+        entry_str = json.dumps(entry_data, sort_keys=True, separators=(',', ':'))
         return hashlib.sha256(entry_str.encode()).hexdigest()
 
     def _append_genesis(self):
